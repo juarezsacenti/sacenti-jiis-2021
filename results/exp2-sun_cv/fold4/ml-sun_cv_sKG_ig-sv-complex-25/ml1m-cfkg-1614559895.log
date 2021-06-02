@@ -1,0 +1,320 @@
+2021-02-28 21:51:35,840 - root - INFO - Flag Values:
+{
+    "L1_flag": true,
+    "batch_size": 256,
+    "ckpt_path": "/home/juarez/git/results/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/",
+    "clipping_max_value": 5.0,
+    "data_path": "/home/juarez/git/datasets/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/cao-format/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 234969,
+    "embedding_size": 100,
+    "eval_interval_steps": 9380,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-cfkg-1614559895",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 0.0,
+    "learning_rate": 0.005,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": "/home/juarez/git/results/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/ml1m-bprmf-pretrained.ckpt:/home/juarez/git/results/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/ml1m-transe-pretrained.ckpt",
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/home/juarez/git/results/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "cfkg",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adam",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 0,
+    "share_embeddings": true,
+    "topn": 10,
+    "training_steps": 234500,
+    "use_st_gumbel": true,
+    "visualization_port": 8097
+}
+2021-02-28 21:51:36,015 - root - INFO - Totally 59985 train ratings, 19995,19995 eval ratings in files: /home/juarez/git/datasets/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/cao-format/ml1m/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/cao-format/ml1m/test.dat!
+2021-02-28 21:51:36,017 - root - INFO - successfully load 943 users and 1675 items!
+2021-02-28 21:51:36,087 - root - INFO - Totally 6599 train triples, 873,1762 eval triples in files: /home/juarez/git/datasets/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/cao-format/ml1m/kg/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/cao-format/ml1m/kg/test.dat!
+2021-02-28 21:51:36,090 - root - INFO - successfully load 2821 entities and 3 relations!
+2021-02-28 21:51:36,100 - root - INFO - Find 1668 aligned items and entities!
+2021-02-28 21:51:36,101 - root - INFO - Building model.
+2021-02-28 21:51:37,391 - root - INFO - Architecture: CFKG(
+  (user_embeddings): Embedding(943, 100)
+  (ent_embeddings): Embedding(2828, 100)
+  (rel_embeddings): Embedding(4, 100)
+  (item_embeddings): Embedding(2828, 100)
+)
+2021-02-28 21:51:37,391 - root - INFO - Total params: 377500.0
+2021-02-28 21:51:37,392 - root - INFO - One epoch is 469 steps.
+2021-02-28 21:51:37,392 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-02-28 21:51:37,420 - root - INFO - Restored 2821 entities from checkpoint.
+2021-02-28 21:51:37,435 - root - INFO - Restored 1675 items from checkpoint.
+2021-02-28 21:51:37,435 - root - INFO - Load Embeddings of user_embeddings.weight, item_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/ml1m-bprmf-pretrained.ckpt.
+2021-02-28 21:51:37,435 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-02-28 21:51:37,438 - root - INFO - Restored 3 relations from checkpoint.
+2021-02-28 21:51:37,463 - root - INFO - Restored 2821 entities from checkpoint.
+2021-02-28 21:51:37,478 - root - INFO - Restored 1675 items from checkpoint.
+2021-02-28 21:51:37,478 - root - INFO - Load Embeddings of ent_embeddings.weight, rel_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp2/fold4/ml-sun_cv_sKG_ig-sv-complex-25/ml1m-transe-pretrained.ckpt.
+2021-02-28 21:51:37,478 - root - INFO - Training.
+2021-02-28 21:51:37,478 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2021-02-28 21:51:38,588 - root - INFO - f1:0.0066, p:0.0125, r:0.0055, hit:0.1124, ndcg:0.0576, topn:10.
+2021-02-28 21:51:39,716 - root - INFO - f1:0.0087, p:0.0162, r:0.0076, hit:0.1442, ndcg:0.0743, topn:10.
+2021-02-28 21:51:41,260 - root - INFO - head hit:0.0046, head mean rank:1151.4112, topn:10.
+2021-02-28 21:51:41,260 - root - INFO - tail hit:0.2142, tail mean rank:464.6735, topn:10.
+2021-02-28 21:51:41,260 - root - INFO - avg hit:0.1094, avg mean rank:808.0424, topn:10.
+2021-02-28 21:51:44,023 - root - INFO - head hit:0.0045, head mean rank:1109.4756, topn:10.
+2021-02-28 21:51:44,023 - root - INFO - tail hit:0.2491, tail mean rank:406.4126, topn:10.
+2021-02-28 21:51:44,024 - root - INFO - avg hit:0.1268, avg mean rank:757.9441, topn:10.
+2021-02-28 21:52:36,313 - root - INFO - rec train loss:5.4359, kg train loss:21.3350!
+2021-02-28 21:52:37,497 - root - INFO - f1:0.1255, p:0.2088, r:0.1196, hit:0.7752, ndcg:0.5319, topn:10.
+2021-02-28 21:52:38,622 - root - INFO - f1:0.1281, p:0.2119, r:0.1206, hit:0.7709, ndcg:0.5189, topn:10.
+2021-02-28 21:52:40,251 - root - INFO - head hit:0.0504, head mean rank:668.5040, topn:10.
+2021-02-28 21:52:40,252 - root - INFO - tail hit:0.2027, tail mean rank:337.1478, topn:10.
+2021-02-28 21:52:40,252 - root - INFO - avg hit:0.1266, avg mean rank:502.8259, topn:10.
+2021-02-28 21:52:42,894 - root - INFO - head hit:0.0630, head mean rank:631.9512, topn:10.
+2021-02-28 21:52:42,894 - root - INFO - tail hit:0.1947, tail mean rank:342.3326, topn:10.
+2021-02-28 21:52:42,894 - root - INFO - avg hit:0.1288, avg mean rank:487.1419, topn:10.
+2021-02-28 21:52:42,895 - root - INFO - Checkpointing ...
+2021-02-28 21:53:33,280 - root - INFO - rec train loss:4.8380, kg train loss:19.0107!
+2021-02-28 21:53:34,480 - root - INFO - f1:0.1384, p:0.2265, r:0.1314, hit:0.8165, ndcg:0.5429, topn:10.
+2021-02-28 21:53:35,600 - root - INFO - f1:0.1329, p:0.2209, r:0.1255, hit:0.7869, ndcg:0.5241, topn:10.
+2021-02-28 21:53:37,191 - root - INFO - head hit:0.0470, head mean rank:681.8992, topn:10.
+2021-02-28 21:53:37,191 - root - INFO - tail hit:0.2165, tail mean rank:334.3482, topn:10.
+2021-02-28 21:53:37,191 - root - INFO - avg hit:0.1317, avg mean rank:508.1237, topn:10.
+2021-02-28 21:53:39,921 - root - INFO - head hit:0.0573, head mean rank:611.2316, topn:10.
+2021-02-28 21:53:39,921 - root - INFO - tail hit:0.2577, tail mean rank:300.1884, topn:10.
+2021-02-28 21:53:39,921 - root - INFO - avg hit:0.1575, avg mean rank:455.7100, topn:10.
+2021-02-28 21:53:39,922 - root - INFO - Checkpointing ...
+2021-02-28 21:54:31,549 - root - INFO - rec train loss:4.8136, kg train loss:18.9243!
+2021-02-28 21:54:32,944 - root - INFO - f1:0.1325, p:0.2183, r:0.1249, hit:0.7794, ndcg:0.5123, topn:10.
+2021-02-28 21:54:34,098 - root - INFO - f1:0.1286, p:0.2144, r:0.1220, hit:0.7720, ndcg:0.5056, topn:10.
+2021-02-28 21:54:35,768 - root - INFO - head hit:0.0515, head mean rank:623.3436, topn:10.
+2021-02-28 21:54:35,768 - root - INFO - tail hit:0.2050, tail mean rank:355.8030, topn:10.
+2021-02-28 21:54:35,768 - root - INFO - avg hit:0.1283, avg mean rank:489.5733, topn:10.
+2021-02-28 21:54:38,520 - root - INFO - head hit:0.0607, head mean rank:630.6084, topn:10.
+2021-02-28 21:54:38,520 - root - INFO - tail hit:0.2350, tail mean rank:344.6504, topn:10.
+2021-02-28 21:54:38,520 - root - INFO - avg hit:0.1478, avg mean rank:487.6294, topn:10.
+2021-02-28 21:54:38,521 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2021-02-28 21:55:30,065 - root - INFO - rec train loss:1.1894, kg train loss:4.1301!
+2021-02-28 21:55:31,216 - root - INFO - f1:0.1495, p:0.2452, r:0.1429, hit:0.8250, ndcg:0.5533, topn:10.
+2021-02-28 21:55:32,399 - root - INFO - f1:0.1488, p:0.2506, r:0.1394, hit:0.7975, ndcg:0.5428, topn:10.
+2021-02-28 21:55:33,981 - root - INFO - head hit:0.0848, head mean rank:632.5189, topn:10.
+2021-02-28 21:55:33,982 - root - INFO - tail hit:0.2864, tail mean rank:302.8694, topn:10.
+2021-02-28 21:55:33,982 - root - INFO - avg hit:0.1856, avg mean rank:467.6942, topn:10.
+2021-02-28 21:55:36,761 - root - INFO - head hit:0.0965, head mean rank:564.5579, topn:10.
+2021-02-28 21:55:36,761 - root - INFO - tail hit:0.2997, tail mean rank:283.9058, topn:10.
+2021-02-28 21:55:36,761 - root - INFO - avg hit:0.1981, avg mean rank:424.2318, topn:10.
+2021-02-28 21:55:36,763 - root - INFO - Checkpointing ...
+2021-02-28 21:56:31,026 - root - INFO - rec train loss:1.1206, kg train loss:3.9103!
+2021-02-28 21:56:32,160 - root - INFO - f1:0.1602, p:0.2604, r:0.1533, hit:0.8431, ndcg:0.5776, topn:10.
+2021-02-28 21:56:33,273 - root - INFO - f1:0.1600, p:0.2621, r:0.1518, hit:0.8367, ndcg:0.5608, topn:10.
+2021-02-28 21:56:34,906 - root - INFO - head hit:0.0813, head mean rank:603.9187, topn:10.
+2021-02-28 21:56:34,907 - root - INFO - tail hit:0.2703, tail mean rank:289.3814, topn:10.
+2021-02-28 21:56:34,907 - root - INFO - avg hit:0.1758, avg mean rank:446.6501, topn:10.
+2021-02-28 21:56:37,626 - root - INFO - head hit:0.0857, head mean rank:552.0329, topn:10.
+2021-02-28 21:56:37,626 - root - INFO - tail hit:0.3212, tail mean rank:269.4347, topn:10.
+2021-02-28 21:56:37,626 - root - INFO - avg hit:0.2035, avg mean rank:410.7338, topn:10.
+2021-02-28 21:56:37,628 - root - INFO - Checkpointing ...
+2021-02-28 21:57:29,580 - root - INFO - rec train loss:1.1379, kg train loss:3.8816!
+2021-02-28 21:57:30,766 - root - INFO - f1:0.1581, p:0.2593, r:0.1511, hit:0.8409, ndcg:0.5868, topn:10.
+2021-02-28 21:57:31,900 - root - INFO - f1:0.1503, p:0.2494, r:0.1403, hit:0.8144, ndcg:0.5656, topn:10.
+2021-02-28 21:57:33,374 - root - INFO - head hit:0.0871, head mean rank:594.3631, topn:10.
+2021-02-28 21:57:33,375 - root - INFO - tail hit:0.2898, tail mean rank:302.5796, topn:10.
+2021-02-28 21:57:33,375 - root - INFO - avg hit:0.1884, avg mean rank:448.4714, topn:10.
+2021-02-28 21:57:35,944 - root - INFO - head hit:0.0851, head mean rank:547.6084, topn:10.
+2021-02-28 21:57:35,945 - root - INFO - tail hit:0.3070, tail mean rank:270.0624, topn:10.
+2021-02-28 21:57:35,945 - root - INFO - avg hit:0.1961, avg mean rank:408.8354, topn:10.
+2021-02-28 21:57:35,947 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2021-02-28 21:58:27,007 - root - INFO - rec train loss:0.3341, kg train loss:0.7758!
+2021-02-28 21:58:28,137 - root - INFO - f1:0.1781, p:0.2879, r:0.1715, hit:0.8590, ndcg:0.6019, topn:10.
+2021-02-28 21:58:29,312 - root - INFO - f1:0.1744, p:0.2871, r:0.1653, hit:0.8378, ndcg:0.5850, topn:10.
+2021-02-28 21:58:30,778 - root - INFO - head hit:0.1375, head mean rank:509.2658, topn:10.
+2021-02-28 21:58:30,778 - root - INFO - tail hit:0.3265, tail mean rank:243.9049, topn:10.
+2021-02-28 21:58:30,778 - root - INFO - avg hit:0.2320, avg mean rank:376.5853, topn:10.
+2021-02-28 21:58:33,458 - root - INFO - head hit:0.1657, head mean rank:483.7321, topn:10.
+2021-02-28 21:58:33,459 - root - INFO - tail hit:0.3456, tail mean rank:230.8235, topn:10.
+2021-02-28 21:58:33,459 - root - INFO - avg hit:0.2557, avg mean rank:357.2778, topn:10.
+2021-02-28 21:58:33,461 - root - INFO - Checkpointing ...
+2021-02-28 21:59:25,356 - root - INFO - rec train loss:0.2950, kg train loss:0.6385!
+2021-02-28 21:59:26,484 - root - INFO - f1:0.1856, p:0.2999, r:0.1779, hit:0.8759, ndcg:0.6323, topn:10.
+2021-02-28 21:59:27,635 - root - INFO - f1:0.1857, p:0.3017, r:0.1770, hit:0.8653, ndcg:0.6098, topn:10.
+2021-02-28 21:59:29,217 - root - INFO - head hit:0.1478, head mean rank:515.6655, topn:10.
+2021-02-28 21:59:29,217 - root - INFO - tail hit:0.3471, tail mean rank:247.5074, topn:10.
+2021-02-28 21:59:29,217 - root - INFO - avg hit:0.2474, avg mean rank:381.5865, topn:10.
+2021-02-28 21:59:31,805 - root - INFO - head hit:0.1538, head mean rank:478.5045, topn:10.
+2021-02-28 21:59:31,805 - root - INFO - tail hit:0.3621, tail mean rank:223.0630, topn:10.
+2021-02-28 21:59:31,805 - root - INFO - avg hit:0.2579, avg mean rank:350.7838, topn:10.
+2021-02-28 21:59:31,806 - root - INFO - Checkpointing ...
+2021-02-28 22:00:23,476 - root - INFO - rec train loss:0.2785, kg train loss:0.6090!
+2021-02-28 22:00:24,665 - root - INFO - f1:0.1878, p:0.3024, r:0.1822, hit:0.8855, ndcg:0.6412, topn:10.
+2021-02-28 22:00:25,763 - root - INFO - f1:0.1851, p:0.3012, r:0.1772, hit:0.8537, ndcg:0.6055, topn:10.
+2021-02-28 22:00:27,243 - root - INFO - head hit:0.1397, head mean rank:521.6334, topn:10.
+2021-02-28 22:00:27,244 - root - INFO - tail hit:0.3322, tail mean rank:229.9977, topn:10.
+2021-02-28 22:00:27,244 - root - INFO - avg hit:0.2360, avg mean rank:375.8156, topn:10.
+2021-02-28 22:00:29,978 - root - INFO - head hit:0.1498, head mean rank:477.9705, topn:10.
+2021-02-28 22:00:29,978 - root - INFO - tail hit:0.3678, tail mean rank:219.9274, topn:10.
+2021-02-28 22:00:29,979 - root - INFO - avg hit:0.2588, avg mean rank:348.9489, topn:10.
+2021-02-28 22:00:29,980 - root - INFO - Checkpointing ...
+2021-02-28 22:01:22,352 - root - INFO - rec train loss:0.2768, kg train loss:0.6098!
+2021-02-28 22:01:23,404 - root - INFO - f1:0.1896, p:0.3050, r:0.1827, hit:0.8696, ndcg:0.6278, topn:10.
+2021-02-28 22:01:24,496 - root - INFO - f1:0.1931, p:0.3093, r:0.1867, hit:0.8759, ndcg:0.6298, topn:10.
+2021-02-28 22:01:26,027 - root - INFO - head hit:0.1340, head mean rank:511.7205, topn:10.
+2021-02-28 22:01:26,027 - root - INFO - tail hit:0.3540, tail mean rank:230.8855, topn:10.
+2021-02-28 22:01:26,027 - root - INFO - avg hit:0.2440, avg mean rank:371.3030, topn:10.
+2021-02-28 22:01:28,713 - root - INFO - head hit:0.1697, head mean rank:481.6918, topn:10.
+2021-02-28 22:01:28,713 - root - INFO - tail hit:0.3797, tail mean rank:208.3530, topn:10.
+2021-02-28 22:01:28,713 - root - INFO - avg hit:0.2747, avg mean rank:345.0224, topn:10.
+2021-02-28 22:01:28,714 - root - INFO - Checkpointing ...
+2021-02-28 22:02:21,162 - root - INFO - rec train loss:0.2604, kg train loss:0.5861!
+2021-02-28 22:02:22,274 - root - INFO - f1:0.1887, p:0.3077, r:0.1785, hit:0.8674, ndcg:0.6232, topn:10.
+2021-02-28 22:02:23,363 - root - INFO - f1:0.1866, p:0.3075, r:0.1753, hit:0.8484, ndcg:0.6087, topn:10.
+2021-02-28 22:02:24,807 - root - INFO - head hit:0.1478, head mean rank:508.9553, topn:10.
+2021-02-28 22:02:24,808 - root - INFO - tail hit:0.3574, tail mean rank:221.3792, topn:10.
+2021-02-28 22:02:24,808 - root - INFO - avg hit:0.2526, avg mean rank:365.1672, topn:10.
+2021-02-28 22:02:27,437 - root - INFO - head hit:0.1674, head mean rank:477.3218, topn:10.
+2021-02-28 22:02:27,438 - root - INFO - tail hit:0.3666, tail mean rank:206.9030, topn:10.
+2021-02-28 22:02:27,438 - root - INFO - avg hit:0.2670, avg mean rank:342.1124, topn:10.
+2021-02-28 22:02:27,439 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2021-02-28 22:03:19,793 - root - INFO - rec train loss:0.1513, kg train loss:0.1865!
+2021-02-28 22:03:20,959 - root - INFO - f1:0.2051, p:0.3304, r:0.1967, hit:0.8823, ndcg:0.6578, topn:10.
+2021-02-28 22:03:22,113 - root - INFO - f1:0.2078, p:0.3347, r:0.1992, hit:0.8770, ndcg:0.6474, topn:10.
+2021-02-28 22:03:23,592 - root - INFO - head hit:0.2027, head mean rank:455.8316, topn:10.
+2021-02-28 22:03:23,593 - root - INFO - tail hit:0.4089, tail mean rank:189.2600, topn:10.
+2021-02-28 22:03:23,593 - root - INFO - avg hit:0.3058, avg mean rank:322.5458, topn:10.
+2021-02-28 22:03:26,122 - root - INFO - head hit:0.2162, head mean rank:436.3513, topn:10.
+2021-02-28 22:03:26,122 - root - INFO - tail hit:0.4387, tail mean rank:181.9092, topn:10.
+2021-02-28 22:03:26,122 - root - INFO - avg hit:0.3275, avg mean rank:309.1302, topn:10.
+2021-02-28 22:03:26,124 - root - INFO - Checkpointing ...
+2021-02-28 22:04:17,678 - root - INFO - rec train loss:0.1254, kg train loss:0.1338!
+2021-02-28 22:04:18,858 - root - INFO - f1:0.2093, p:0.3366, r:0.2012, hit:0.8950, ndcg:0.6620, topn:10.
+2021-02-28 22:04:20,013 - root - INFO - f1:0.2116, p:0.3401, r:0.2030, hit:0.8929, ndcg:0.6577, topn:10.
+2021-02-28 22:04:21,517 - root - INFO - head hit:0.2153, head mean rank:459.6598, topn:10.
+2021-02-28 22:04:21,517 - root - INFO - tail hit:0.4181, tail mean rank:188.9817, topn:10.
+2021-02-28 22:04:21,518 - root - INFO - avg hit:0.3167, avg mean rank:324.3207, topn:10.
+2021-02-28 22:04:24,186 - root - INFO - head hit:0.2503, head mean rank:419.1180, topn:10.
+2021-02-28 22:04:24,186 - root - INFO - tail hit:0.4580, tail mean rank:171.3825, topn:10.
+2021-02-28 22:04:24,186 - root - INFO - avg hit:0.3541, avg mean rank:295.2503, topn:10.
+2021-02-28 22:04:24,187 - root - INFO - Checkpointing ...
+2021-02-28 22:05:18,638 - root - INFO - rec train loss:0.1227, kg train loss:0.1399!
+2021-02-28 22:05:19,865 - root - INFO - f1:0.2156, p:0.3449, r:0.2094, hit:0.9035, ndcg:0.6743, topn:10.
+2021-02-28 22:05:21,060 - root - INFO - f1:0.2155, p:0.3453, r:0.2077, hit:0.8993, ndcg:0.6770, topn:10.
+2021-02-28 22:05:22,623 - root - INFO - head hit:0.2245, head mean rank:445.9794, topn:10.
+2021-02-28 22:05:22,623 - root - INFO - tail hit:0.4364, tail mean rank:187.2085, topn:10.
+2021-02-28 22:05:22,623 - root - INFO - avg hit:0.3305, avg mean rank:316.5939, topn:10.
+2021-02-28 22:05:25,240 - root - INFO - head hit:0.2327, head mean rank:413.9932, topn:10.
+2021-02-28 22:05:25,241 - root - INFO - tail hit:0.4552, tail mean rank:176.8405, topn:10.
+2021-02-28 22:05:25,241 - root - INFO - avg hit:0.3439, avg mean rank:295.4169, topn:10.
+2021-02-28 22:05:25,242 - root - INFO - Checkpointing ...
+2021-02-28 22:06:18,046 - root - INFO - rec train loss:0.1218, kg train loss:0.1452!
+2021-02-28 22:06:19,196 - root - INFO - f1:0.2181, p:0.3489, r:0.2104, hit:0.9099, ndcg:0.6786, topn:10.
+2021-02-28 22:06:20,311 - root - INFO - f1:0.2152, p:0.3468, r:0.2066, hit:0.8971, ndcg:0.6753, topn:10.
+2021-02-28 22:06:21,820 - root - INFO - head hit:0.2119, head mean rank:431.5945, topn:10.
+2021-02-28 22:06:21,820 - root - INFO - tail hit:0.4353, tail mean rank:174.0515, topn:10.
+2021-02-28 22:06:21,820 - root - INFO - avg hit:0.3236, avg mean rank:302.8230, topn:10.
+2021-02-28 22:06:24,379 - root - INFO - head hit:0.2372, head mean rank:418.6243, topn:10.
+2021-02-28 22:06:24,380 - root - INFO - tail hit:0.4699, tail mean rank:171.7860, topn:10.
+2021-02-28 22:06:24,380 - root - INFO - avg hit:0.3536, avg mean rank:295.2052, topn:10.
+2021-02-28 22:06:24,382 - root - INFO - Checkpointing ...
+2021-02-28 22:07:14,936 - root - INFO - rec train loss:0.1191, kg train loss:0.1427!
+2021-02-28 22:07:16,065 - root - INFO - f1:0.2157, p:0.3452, r:0.2086, hit:0.8993, ndcg:0.6690, topn:10.
+2021-02-28 22:07:17,408 - root - INFO - f1:0.2194, p:0.3519, r:0.2118, hit:0.9014, ndcg:0.6721, topn:10.
+2021-02-28 22:07:18,896 - root - INFO - head hit:0.2176, head mean rank:434.6277, topn:10.
+2021-02-28 22:07:18,896 - root - INFO - tail hit:0.4215, tail mean rank:174.7663, topn:10.
+2021-02-28 22:07:18,896 - root - INFO - avg hit:0.3196, avg mean rank:304.6970, topn:10.
+2021-02-28 22:07:21,643 - root - INFO - head hit:0.2452, head mean rank:421.0647, topn:10.
+2021-02-28 22:07:21,643 - root - INFO - tail hit:0.4694, tail mean rank:171.1686, topn:10.
+2021-02-28 22:07:21,644 - root - INFO - avg hit:0.3573, avg mean rank:296.1166, topn:10.
+2021-02-28 22:07:21,646 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2021-02-28 22:08:12,162 - root - INFO - rec train loss:0.0947, kg train loss:0.0826!
+2021-02-28 22:08:13,265 - root - INFO - f1:0.2255, p:0.3600, r:0.2181, hit:0.9152, ndcg:0.6905, topn:10.
+2021-02-28 22:08:14,414 - root - INFO - f1:0.2246, p:0.3604, r:0.2168, hit:0.9035, ndcg:0.6826, topn:10.
+2021-02-28 22:08:15,993 - root - INFO - head hit:0.2451, head mean rank:422.7915, topn:10.
+2021-02-28 22:08:15,994 - root - INFO - tail hit:0.4479, tail mean rank:165.5991, topn:10.
+2021-02-28 22:08:15,994 - root - INFO - avg hit:0.3465, avg mean rank:294.1953, topn:10.
+2021-02-28 22:08:18,707 - root - INFO - head hit:0.2770, head mean rank:403.3678, topn:10.
+2021-02-28 22:08:18,708 - root - INFO - tail hit:0.4756, tail mean rank:163.6544, topn:10.
+2021-02-28 22:08:18,708 - root - INFO - avg hit:0.3763, avg mean rank:283.5111, topn:10.
+2021-02-28 22:08:18,709 - root - INFO - Checkpointing ...
+2021-02-28 22:09:09,048 - root - INFO - rec train loss:0.0881, kg train loss:0.0601!
+2021-02-28 22:09:10,223 - root - INFO - f1:0.2278, p:0.3639, r:0.2208, hit:0.9183, ndcg:0.6885, topn:10.
+2021-02-28 22:09:11,396 - root - INFO - f1:0.2238, p:0.3598, r:0.2150, hit:0.8940, ndcg:0.6860, topn:10.
+2021-02-28 22:09:12,950 - root - INFO - head hit:0.2314, head mean rank:426.9565, topn:10.
+2021-02-28 22:09:12,950 - root - INFO - tail hit:0.4651, tail mean rank:162.0378, topn:10.
+2021-02-28 22:09:12,950 - root - INFO - avg hit:0.3482, avg mean rank:294.4971, topn:10.
+2021-02-28 22:09:15,504 - root - INFO - head hit:0.2804, head mean rank:403.6873, topn:10.
+2021-02-28 22:09:15,504 - root - INFO - tail hit:0.4994, tail mean rank:160.0272, topn:10.
+2021-02-28 22:09:15,504 - root - INFO - avg hit:0.3899, avg mean rank:281.8573, topn:10.
+2021-02-28 22:09:15,506 - root - INFO - Checkpointing ...
+2021-02-28 22:10:07,212 - root - INFO - rec train loss:0.0868, kg train loss:0.0630!
+2021-02-28 22:10:08,393 - root - INFO - f1:0.2292, p:0.3655, r:0.2224, hit:0.9173, ndcg:0.6973, topn:10.
+2021-02-28 22:10:09,588 - root - INFO - f1:0.2277, p:0.3653, r:0.2193, hit:0.9024, ndcg:0.6815, topn:10.
+2021-02-28 22:10:11,083 - root - INFO - head hit:0.2474, head mean rank:416.0767, topn:10.
+2021-02-28 22:10:11,083 - root - INFO - tail hit:0.4800, tail mean rank:161.1856, topn:10.
+2021-02-28 22:10:11,083 - root - INFO - avg hit:0.3637, avg mean rank:288.6312, topn:10.
+2021-02-28 22:10:13,686 - root - INFO - head hit:0.2900, head mean rank:401.6731, topn:10.
+2021-02-28 22:10:13,686 - root - INFO - tail hit:0.4904, tail mean rank:163.7622, topn:10.
+2021-02-28 22:10:13,686 - root - INFO - avg hit:0.3902, avg mean rank:282.7177, topn:10.
+2021-02-28 22:10:13,688 - root - INFO - Checkpointing ...
+2021-02-28 22:11:07,236 - root - INFO - rec train loss:0.0874, kg train loss:0.0629!
+2021-02-28 22:11:08,359 - root - INFO - f1:0.2310, p:0.3683, r:0.2239, hit:0.9258, ndcg:0.6873, topn:10.
+2021-02-28 22:11:09,530 - root - INFO - f1:0.2297, p:0.3674, r:0.2230, hit:0.9077, ndcg:0.6869, topn:10.
+2021-02-28 22:11:11,084 - root - INFO - head hit:0.2509, head mean rank:430.9782, topn:10.
+2021-02-28 22:11:11,084 - root - INFO - tail hit:0.4616, tail mean rank:160.4536, topn:10.
+2021-02-28 22:11:11,084 - root - INFO - avg hit:0.3562, avg mean rank:295.7159, topn:10.
+2021-02-28 22:11:13,819 - root - INFO - head hit:0.2906, head mean rank:401.7787, topn:10.
+2021-02-28 22:11:13,820 - root - INFO - tail hit:0.4767, tail mean rank:158.8774, topn:10.
+2021-02-28 22:11:13,820 - root - INFO - avg hit:0.3837, avg mean rank:280.3280, topn:10.
+2021-02-28 22:11:13,821 - root - INFO - Checkpointing ...
+2021-02-28 22:12:04,588 - root - INFO - rec train loss:0.0864, kg train loss:0.0668!
+2021-02-28 22:12:05,734 - root - INFO - f1:0.2281, p:0.3670, r:0.2195, hit:0.9183, ndcg:0.6941, topn:10.
+2021-02-28 22:12:06,885 - root - INFO - f1:0.2303, p:0.3708, r:0.2215, hit:0.9046, ndcg:0.6930, topn:10.
+2021-02-28 22:12:08,478 - root - INFO - head hit:0.2451, head mean rank:430.8339, topn:10.
+2021-02-28 22:12:08,479 - root - INFO - tail hit:0.4788, tail mean rank:162.1340, topn:10.
+2021-02-28 22:12:08,479 - root - INFO - avg hit:0.3620, avg mean rank:296.4840, topn:10.
+2021-02-28 22:12:11,097 - root - INFO - head hit:0.2883, head mean rank:401.9461, topn:10.
+2021-02-28 22:12:11,097 - root - INFO - tail hit:0.5000, tail mean rank:157.2089, topn:10.
+2021-02-28 22:12:11,097 - root - INFO - avg hit:0.3942, avg mean rank:279.5775, topn:10.
+2021-02-28 22:12:11,099 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2021-02-28 22:13:01,724 - root - INFO - rec train loss:0.0775, kg train loss:0.0467!
+2021-02-28 22:13:02,923 - root - INFO - f1:0.2304, p:0.3699, r:0.2216, hit:0.9183, ndcg:0.6993, topn:10.
+2021-02-28 22:13:04,033 - root - INFO - f1:0.2323, p:0.3721, r:0.2240, hit:0.9088, ndcg:0.6922, topn:10.
+2021-02-28 22:13:05,589 - root - INFO - head hit:0.2646, head mean rank:423.1409, topn:10.
+2021-02-28 22:13:05,590 - root - INFO - tail hit:0.4788, tail mean rank:156.8408, topn:10.
+2021-02-28 22:13:05,590 - root - INFO - avg hit:0.3717, avg mean rank:289.9908, topn:10.
+2021-02-28 22:13:08,249 - root - INFO - head hit:0.3065, head mean rank:392.6073, topn:10.
+2021-02-28 22:13:08,249 - root - INFO - tail hit:0.4960, tail mean rank:153.6930, topn:10.
+2021-02-28 22:13:08,249 - root - INFO - avg hit:0.4012, avg mean rank:273.1501, topn:10.
+2021-02-28 22:13:08,251 - root - INFO - No improvement after one epoch. Lowering learning rate.
+2021-02-28 22:13:59,649 - root - INFO - rec train loss:0.0741, kg train loss:0.0347!
+2021-02-28 22:14:00,817 - root - INFO - f1:0.2325, p:0.3717, r:0.2257, hit:0.9226, ndcg:0.6992, topn:10.
+2021-02-28 22:14:01,986 - root - INFO - f1:0.2331, p:0.3729, r:0.2254, hit:0.9109, ndcg:0.6971, topn:10.
+2021-02-28 22:14:03,529 - root - INFO - head hit:0.2795, head mean rank:426.2841, topn:10.
+2021-02-28 22:14:03,529 - root - INFO - tail hit:0.4777, tail mean rank:157.4307, topn:10.
+2021-02-28 22:14:03,529 - root - INFO - avg hit:0.3786, avg mean rank:291.8574, topn:10.
+2021-02-28 22:14:06,157 - root - INFO - head hit:0.3150, head mean rank:397.5040, topn:10.
+2021-02-28 22:14:06,158 - root - INFO - tail hit:0.5000, tail mean rank:153.1697, topn:10.
+2021-02-28 22:14:06,158 - root - INFO - avg hit:0.4075, avg mean rank:275.3368, topn:10.
+2021-02-28 22:14:06,159 - root - INFO - Checkpointing ...
+2021-02-28 22:14:58,840 - root - INFO - rec train loss:0.0714, kg train loss:0.0318!
+2021-02-28 22:15:00,027 - root - INFO - f1:0.2350, p:0.3757, r:0.2276, hit:0.9258, ndcg:0.7012, topn:10.
+2021-02-28 22:15:01,198 - root - INFO - f1:0.2348, p:0.3762, r:0.2258, hit:0.9120, ndcg:0.6996, topn:10.
+2021-02-28 22:15:02,777 - root - INFO - head hit:0.2852, head mean rank:427.9897, topn:10.
+2021-02-28 22:15:02,778 - root - INFO - tail hit:0.4891, tail mean rank:157.9370, topn:10.
+2021-02-28 22:15:02,778 - root - INFO - avg hit:0.3872, avg mean rank:292.9633, topn:10.
+2021-02-28 22:15:05,379 - root - INFO - head hit:0.3201, head mean rank:398.8087, topn:10.
+2021-02-28 22:15:05,380 - root - INFO - tail hit:0.5074, tail mean rank:152.9847, topn:10.
+2021-02-28 22:15:05,380 - root - INFO - avg hit:0.4137, avg mean rank:275.8967, topn:10.
+2021-02-28 22:15:05,381 - root - INFO - Checkpointing ...
+2021-02-28 22:16:00,069 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.373383, 'RECALL@10': 0.224962, 'NDCG@10': 0.699588, 'MAP@10': 0.592217, 'MAP': 0.592217}.
+2021-02-28 22:16:00,271 - root - INFO - From kg-summ-rec diversity evaluator: {'GENRE_COVERAGE@10': 0.456124, 'GENRE_REDUNDANCY@10': 0.410126, 'ILD_GENRE@10': 0.794693}.
+2021-02-28 22:16:01,953 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.375716, 'RECALL@10': 0.226822, 'NDCG@10': 0.69767, 'MAP@10': 0.59369, 'MAP': 0.59369}.
+2021-02-28 22:16:02,156 - root - INFO - From kg-summ-rec diversity evaluator: {'GENRE_COVERAGE@10': 0.458643, 'GENRE_REDUNDANCY@10': 0.411889, 'ILD_GENRE@10': 0.794585}.

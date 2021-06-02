@@ -1,0 +1,88 @@
+2021-04-29 13:51:51,391 - root - INFO - Flag Values:
+{
+    "L1_flag": true,
+    "batch_size": 400,
+    "ckpt_path": "/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/",
+    "clipping_max_value": 5.0,
+    "data_path": "/home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/cao-format/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 1052701,
+    "embedding_size": 100,
+    "eval_interval_steps": 1052699,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-cfkg-1619715111",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 0.0,
+    "learning_rate": 0.001,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": "/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/ml1m-bprmf-pretrained2.ckpt:/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/ml1m-transe-pretrained2.ckpt",
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "cfkg",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adam",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 3,
+    "share_embeddings": true,
+    "topn": 10,
+    "training_steps": 1052700,
+    "use_st_gumbel": false,
+    "visualization_port": 8097
+}
+2021-04-29 13:51:53,168 - root - INFO - Totally 599124 train ratings, 199708,199707 eval ratings in files: /home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/cao-format/ml1m/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/cao-format/ml1m/test.dat!
+2021-04-29 13:51:53,175 - root - INFO - successfully load 6040 users and 3260 items!
+2021-04-29 13:51:54,970 - root - INFO - Totally 248758 train triples, 35524,71040 eval triples in files: /home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/cao-format/ml1m/kg/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/cao-format/ml1m/kg/test.dat!
+2021-04-29 13:51:54,983 - root - INFO - successfully load 13003 entities and 20 relations!
+2021-04-29 13:51:55,234 - root - INFO - Find 2932 aligned items and entities!
+2021-04-29 13:51:55,235 - root - INFO - Building model.
+2021-04-29 13:51:56,868 - root - INFO - Architecture: CFKG(
+  (user_embeddings): Embedding(6040, 100)
+  (ent_embeddings): Embedding(13331, 100)
+  (rel_embeddings): Embedding(21, 100)
+  (item_embeddings): Embedding(13331, 100)
+)
+2021-04-29 13:51:56,868 - root - INFO - Total params: 1939200.0
+2021-04-29 13:51:56,868 - root - INFO - One epoch is 2996 steps.
+2021-04-29 13:51:56,868 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-04-29 13:51:57,039 - root - INFO - Restored 13003 entities from checkpoint.
+2021-04-29 13:51:57,081 - root - INFO - Restored 3260 items from checkpoint.
+2021-04-29 13:51:57,081 - root - INFO - Load Embeddings of user_embeddings.weight, item_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/ml1m-bprmf-pretrained2.ckpt.
+2021-04-29 13:51:57,082 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-04-29 13:51:57,090 - root - INFO - Restored 20 relations from checkpoint.
+2021-04-29 13:51:57,260 - root - INFO - Restored 13003 entities from checkpoint.
+2021-04-29 13:51:57,302 - root - INFO - Restored 3260 items from checkpoint.
+2021-04-29 13:51:57,302 - root - INFO - Load Embeddings of ent_embeddings.weight, rel_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_sKG_ig-mv-complex-75/ml1m-transe-pretrained2.ckpt.
+2021-04-29 13:51:57,302 - root - INFO - Training.
+2021-04-29 13:51:57,302 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2021-04-29 13:52:05,039 - root - INFO - f1:0.0028, p:0.0093, r:0.0021, hit:0.0813, ndcg:0.0435, topn:10.
+2021-04-29 13:52:12,818 - root - INFO - f1:0.0028, p:0.0091, r:0.0020, hit:0.0803, ndcg:0.0418, topn:10.
+2021-04-29 13:53:13,753 - root - INFO - head hit:0.0099, head mean rank:5305.5445, topn:10.
+2021-04-29 13:53:13,753 - root - INFO - tail hit:0.0223, tail mean rank:4252.9134, topn:10.
+2021-04-29 13:53:13,753 - root - INFO - avg hit:0.0161, avg mean rank:4779.2290, topn:10.
+2021-04-29 13:54:39,692 - root - INFO - head hit:0.0107, head mean rank:5322.9409, topn:10.
+2021-04-29 13:54:39,692 - root - INFO - tail hit:0.0238, tail mean rank:4276.3097, topn:10.
+2021-04-29 13:54:39,692 - root - INFO - avg hit:0.0173, avg mean rank:4799.6253, topn:10.
+2021-04-29 17:14:20,934 - root - INFO - rec train loss:4.7479, kg train loss:18.3842!
+2021-04-29 17:14:30,073 - root - INFO - f1:0.1110, p:0.2467, r:0.0923, hit:0.7791, ndcg:0.5347, topn:10.
+2021-04-29 17:14:38,076 - root - INFO - f1:0.1070, p:0.2433, r:0.0901, hit:0.7587, ndcg:0.5243, topn:10.
+2021-04-29 17:15:26,941 - root - INFO - head hit:0.1279, head mean rank:792.2208, topn:10.
+2021-04-29 17:15:26,941 - root - INFO - tail hit:0.1966, tail mean rank:757.9187, topn:10.
+2021-04-29 17:15:26,942 - root - INFO - avg hit:0.1623, avg mean rank:775.0698, topn:10.
+2021-04-29 17:16:37,123 - root - INFO - head hit:0.1305, head mean rank:781.4094, topn:10.
+2021-04-29 17:16:37,123 - root - INFO - tail hit:0.1995, tail mean rank:749.3437, topn:10.
+2021-04-29 17:16:37,123 - root - INFO - avg hit:0.1650, avg mean rank:765.3765, topn:10.
+2021-04-29 17:16:37,162 - root - INFO - Checkpointing ...
+2021-04-29 17:16:49,462 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.246954, 'RECALL@10': 0.092556, 'NDCG@10': 0.534706, 'MAP@10': 0.421852, 'MAP': 0.421852}.
+2021-04-29 17:17:01,297 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.243194, 'RECALL@10': 0.09001, 'NDCG@10': 0.524042, 'MAP@10': 0.415869, 'MAP': 0.415869}.

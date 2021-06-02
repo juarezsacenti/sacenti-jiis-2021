@@ -1,0 +1,430 @@
+2021-03-26 16:17:33,526 - root - INFO - Flag Values:
+{
+    "L1_flag": true,
+    "batch_size": 256,
+    "ckpt_path": "/home/juarez/git/results/JIIS-revised-exp3/ml-cao_ho_oKG/",
+    "clipping_max_value": 5.0,
+    "data_path": "/home/juarez/git/datasets/JIIS-revised-exp3/ml-cao_ho_oKG/cao-format/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 2500,
+    "embedding_size": 100,
+    "eval_interval_steps": 500,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-transup-1616786253",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": null,
+    "l2_lambda": 1e-05,
+    "learning_rate": 0.005,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": "/home/juarez/git/results/JIIS-revised-exp3/ml-cao_ho_oKG/ml1m-bprmf-pretrained.ckpt",
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/home/juarez/git/results/JIIS-revised-exp3/ml-cao_ho_oKG/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "transup",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 20,
+    "num_processes": 4,
+    "optimizer_type": "Adagrad",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 0,
+    "share_embeddings": false,
+    "topn": 10,
+    "training_steps": 50000,
+    "use_st_gumbel": false,
+    "visualization_port": 8097
+}
+2021-03-26 16:17:35,233 - root - INFO - Totally 701669 train ratings, 103239,193631 eval ratings in files: /home/juarez/git/datasets/JIIS-revised-exp3/ml-cao_ho_oKG/cao-format/ml1m/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp3/ml-cao_ho_oKG/cao-format/ml1m/test.dat!
+2021-03-26 16:17:35,240 - root - INFO - successfully load 6040 users and 3260 items!
+2021-03-26 16:17:35,822 - root - INFO - Building model.
+2021-03-26 16:17:37,168 - root - INFO - Architecture: TransUPModel(
+  (user_embeddings): Embedding(6040, 100)
+  (item_embeddings): Embedding(3260, 100)
+  (pref_embeddings): Embedding(20, 100)
+  (pref_norm_embeddings): Embedding(20, 100)
+)
+2021-03-26 16:17:37,168 - root - INFO - Total params: 934000.0
+2021-03-26 16:17:37,168 - root - INFO - One epoch is 2741 steps.
+2021-03-26 16:17:37,169 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-03-26 16:17:37,174 - root - INFO - Load Embeddings of user_embeddings.weight, item_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp3/ml-cao_ho_oKG/ml1m-bprmf-pretrained.ckpt.
+2021-03-26 16:17:37,174 - root - INFO - Training.
+2021-03-26 16:17:37,174 - root - INFO - train loss:0.0000!
+2021-03-26 16:17:47,848 - root - INFO - f1:0.0273, p:0.0581, r:0.0217, hit:0.2924, ndcg:0.1739, topn:10.
+2021-03-26 16:17:58,652 - root - INFO - f1:0.0290, p:0.0946, r:0.0198, hit:0.3858, ndcg:0.2363, topn:10.
+2021-03-26 16:18:04,282 - root - INFO - train loss:407.4240!
+2021-03-26 16:18:15,414 - root - INFO - f1:0.0647, p:0.1171, r:0.0537, hit:0.4813, ndcg:0.3093, topn:10.
+2021-03-26 16:18:26,814 - root - INFO - f1:0.0697, p:0.1871, r:0.0496, hit:0.5712, ndcg:0.3854, topn:10.
+2021-03-26 16:18:26,847 - root - INFO - Checkpointing ...
+2021-03-26 16:18:32,382 - root - INFO - train loss:124.3955!
+2021-03-26 16:18:42,916 - root - INFO - f1:0.0765, p:0.1285, r:0.0683, hit:0.5391, ndcg:0.3480, topn:10.
+2021-03-26 16:18:53,741 - root - INFO - f1:0.0834, p:0.2066, r:0.0621, hit:0.6310, ndcg:0.4288, topn:10.
+2021-03-26 16:18:53,773 - root - INFO - Checkpointing ...
+2021-03-26 16:18:59,345 - root - INFO - train loss:46.3802!
+2021-03-26 16:19:10,816 - root - INFO - f1:0.0863, p:0.1373, r:0.0819, hit:0.5906, ndcg:0.3826, topn:10.
+2021-03-26 16:19:21,865 - root - INFO - f1:0.0951, p:0.2182, r:0.0752, hit:0.6922, ndcg:0.4706, topn:10.
+2021-03-26 16:19:21,892 - root - INFO - Checkpointing ...
+2021-03-26 16:19:27,091 - root - INFO - train loss:16.1788!
+2021-03-26 16:19:37,764 - root - INFO - f1:0.0932, p:0.1421, r:0.0936, hit:0.6308, ndcg:0.4016, topn:10.
+2021-03-26 16:19:48,738 - root - INFO - f1:0.1029, p:0.2217, r:0.0867, hit:0.7389, ndcg:0.4978, topn:10.
+2021-03-26 16:19:48,756 - root - INFO - Checkpointing ...
+2021-03-26 16:19:54,162 - root - INFO - train loss:3.3650!
+2021-03-26 16:20:05,055 - root - INFO - f1:0.0962, p:0.1444, r:0.0985, hit:0.6435, ndcg:0.4078, topn:10.
+2021-03-26 16:20:15,895 - root - INFO - f1:0.1066, p:0.2243, r:0.0925, hit:0.7543, ndcg:0.5023, topn:10.
+2021-03-26 16:20:15,924 - root - INFO - Checkpointing ...
+2021-03-26 16:20:22,316 - root - INFO - train loss:0.3550!
+2021-03-26 16:20:33,177 - root - INFO - f1:0.0998, p:0.1494, r:0.1025, hit:0.6553, ndcg:0.4166, topn:10.
+2021-03-26 16:20:44,678 - root - INFO - f1:0.1100, p:0.2309, r:0.0955, hit:0.7608, ndcg:0.5115, topn:10.
+2021-03-26 16:20:44,708 - root - INFO - Checkpointing ...
+2021-03-26 16:20:50,162 - root - INFO - train loss:0.2608!
+2021-03-26 16:21:00,726 - root - INFO - f1:0.1020, p:0.1524, r:0.1049, hit:0.6618, ndcg:0.4225, topn:10.
+2021-03-26 16:21:11,916 - root - INFO - f1:0.1129, p:0.2362, r:0.0983, hit:0.7685, ndcg:0.5152, topn:10.
+2021-03-26 16:21:11,943 - root - INFO - Checkpointing ...
+2021-03-26 16:21:17,184 - root - INFO - train loss:0.2622!
+2021-03-26 16:21:28,557 - root - INFO - f1:0.1038, p:0.1550, r:0.1068, hit:0.6671, ndcg:0.4264, topn:10.
+2021-03-26 16:21:39,616 - root - INFO - f1:0.1137, p:0.2383, r:0.0986, hit:0.7675, ndcg:0.5201, topn:10.
+2021-03-26 16:21:39,647 - root - INFO - Checkpointing ...
+2021-03-26 16:21:45,305 - root - INFO - train loss:0.2600!
+2021-03-26 16:21:55,398 - root - INFO - f1:0.1047, p:0.1559, r:0.1080, hit:0.6675, ndcg:0.4293, topn:10.
+2021-03-26 16:22:06,360 - root - INFO - f1:0.1150, p:0.2409, r:0.0997, hit:0.7699, ndcg:0.5215, topn:10.
+2021-03-26 16:22:06,379 - root - INFO - Checkpointing ...
+2021-03-26 16:22:12,455 - root - INFO - train loss:0.2588!
+2021-03-26 16:22:23,501 - root - INFO - f1:0.1058, p:0.1575, r:0.1089, hit:0.6671, ndcg:0.4303, topn:10.
+2021-03-26 16:22:34,420 - root - INFO - f1:0.1164, p:0.2435, r:0.1009, hit:0.7742, ndcg:0.5257, topn:10.
+2021-03-26 16:22:34,450 - root - INFO - Checkpointing ...
+2021-03-26 16:22:40,903 - root - INFO - train loss:0.2563!
+2021-03-26 16:22:51,653 - root - INFO - f1:0.1067, p:0.1592, r:0.1098, hit:0.6737, ndcg:0.4350, topn:10.
+2021-03-26 16:23:03,071 - root - INFO - f1:0.1183, p:0.2465, r:0.1027, hit:0.7795, ndcg:0.5292, topn:10.
+2021-03-26 16:23:03,102 - root - INFO - Checkpointing ...
+2021-03-26 16:23:09,167 - root - INFO - train loss:0.2501!
+2021-03-26 16:23:19,928 - root - INFO - f1:0.1073, p:0.1603, r:0.1101, hit:0.6737, ndcg:0.4359, topn:10.
+2021-03-26 16:23:31,033 - root - INFO - f1:0.1185, p:0.2475, r:0.1025, hit:0.7781, ndcg:0.5295, topn:10.
+2021-03-26 16:23:31,065 - root - INFO - Checkpointing ...
+2021-03-26 16:23:36,793 - root - INFO - train loss:0.2491!
+2021-03-26 16:23:47,930 - root - INFO - f1:0.1082, p:0.1613, r:0.1112, hit:0.6750, ndcg:0.4351, topn:10.
+2021-03-26 16:23:58,932 - root - INFO - f1:0.1191, p:0.2487, r:0.1031, hit:0.7783, ndcg:0.5313, topn:10.
+2021-03-26 16:23:58,965 - root - INFO - Checkpointing ...
+2021-03-26 16:24:04,363 - root - INFO - train loss:0.2467!
+2021-03-26 16:24:15,063 - root - INFO - f1:0.1088, p:0.1622, r:0.1118, hit:0.6783, ndcg:0.4402, topn:10.
+2021-03-26 16:24:26,642 - root - INFO - f1:0.1194, p:0.2496, r:0.1032, hit:0.7785, ndcg:0.5327, topn:10.
+2021-03-26 16:24:26,662 - root - INFO - Checkpointing ...
+2021-03-26 16:24:32,005 - root - INFO - train loss:0.2474!
+2021-03-26 16:24:42,830 - root - INFO - f1:0.1092, p:0.1629, r:0.1121, hit:0.6791, ndcg:0.4415, topn:10.
+2021-03-26 16:24:53,802 - root - INFO - f1:0.1199, p:0.2506, r:0.1037, hit:0.7808, ndcg:0.5346, topn:10.
+2021-03-26 16:24:53,831 - root - INFO - Checkpointing ...
+2021-03-26 16:24:59,668 - root - INFO - train loss:0.2462!
+2021-03-26 16:25:10,272 - root - INFO - f1:0.1100, p:0.1640, r:0.1127, hit:0.6806, ndcg:0.4414, topn:10.
+2021-03-26 16:25:21,524 - root - INFO - f1:0.1207, p:0.2525, r:0.1043, hit:0.7808, ndcg:0.5378, topn:10.
+2021-03-26 16:25:21,545 - root - INFO - Checkpointing ...
+2021-03-26 16:25:27,641 - root - INFO - train loss:0.2429!
+2021-03-26 16:25:38,321 - root - INFO - f1:0.1101, p:0.1644, r:0.1128, hit:0.6815, ndcg:0.4433, topn:10.
+2021-03-26 16:25:49,011 - root - INFO - f1:0.1207, p:0.2527, r:0.1040, hit:0.7803, ndcg:0.5390, topn:10.
+2021-03-26 16:25:49,031 - root - INFO - Checkpointing ...
+2021-03-26 16:25:54,717 - root - INFO - train loss:0.2425!
+2021-03-26 16:26:06,434 - root - INFO - f1:0.1106, p:0.1649, r:0.1133, hit:0.6815, ndcg:0.4435, topn:10.
+2021-03-26 16:26:17,352 - root - INFO - f1:0.1217, p:0.2543, r:0.1051, hit:0.7853, ndcg:0.5403, topn:10.
+2021-03-26 16:26:17,383 - root - INFO - Checkpointing ...
+2021-03-26 16:26:23,165 - root - INFO - train loss:0.2418!
+2021-03-26 16:26:33,993 - root - INFO - f1:0.1112, p:0.1658, r:0.1139, hit:0.6829, ndcg:0.4447, topn:10.
+2021-03-26 16:26:45,729 - root - INFO - f1:0.1224, p:0.2556, r:0.1057, hit:0.7846, ndcg:0.5405, topn:10.
+2021-03-26 16:26:45,756 - root - INFO - Checkpointing ...
+2021-03-26 16:26:51,664 - root - INFO - train loss:0.2396!
+2021-03-26 16:27:02,386 - root - INFO - f1:0.1122, p:0.1669, r:0.1151, hit:0.6834, ndcg:0.4449, topn:10.
+2021-03-26 16:27:13,339 - root - INFO - f1:0.1229, p:0.2566, r:0.1062, hit:0.7856, ndcg:0.5422, topn:10.
+2021-03-26 16:27:13,358 - root - INFO - Checkpointing ...
+2021-03-26 16:27:18,941 - root - INFO - train loss:0.2395!
+2021-03-26 16:27:29,712 - root - INFO - f1:0.1121, p:0.1674, r:0.1147, hit:0.6839, ndcg:0.4457, topn:10.
+2021-03-26 16:27:41,297 - root - INFO - f1:0.1231, p:0.2571, r:0.1062, hit:0.7839, ndcg:0.5425, topn:10.
+2021-03-26 16:27:46,941 - root - INFO - train loss:0.2412!
+2021-03-26 16:27:57,917 - root - INFO - f1:0.1130, p:0.1681, r:0.1160, hit:0.6859, ndcg:0.4474, topn:10.
+2021-03-26 16:28:09,147 - root - INFO - f1:0.1238, p:0.2587, r:0.1069, hit:0.7856, ndcg:0.5437, topn:10.
+2021-03-26 16:28:09,179 - root - INFO - Checkpointing ...
+2021-03-26 16:28:14,577 - root - INFO - train loss:0.2364!
+2021-03-26 16:28:25,922 - root - INFO - f1:0.1128, p:0.1682, r:0.1157, hit:0.6871, ndcg:0.4489, topn:10.
+2021-03-26 16:28:36,974 - root - INFO - f1:0.1248, p:0.2602, r:0.1077, hit:0.7856, ndcg:0.5441, topn:10.
+2021-03-26 16:28:42,061 - root - INFO - train loss:0.2363!
+2021-03-26 16:28:53,154 - root - INFO - f1:0.1132, p:0.1689, r:0.1161, hit:0.6866, ndcg:0.4491, topn:10.
+2021-03-26 16:29:04,700 - root - INFO - f1:0.1249, p:0.2604, r:0.1079, hit:0.7892, ndcg:0.5460, topn:10.
+2021-03-26 16:29:04,726 - root - INFO - Checkpointing ...
+2021-03-26 16:29:10,414 - root - INFO - train loss:0.2374!
+2021-03-26 16:29:21,278 - root - INFO - f1:0.1137, p:0.1696, r:0.1166, hit:0.6876, ndcg:0.4491, topn:10.
+2021-03-26 16:29:32,187 - root - INFO - f1:0.1248, p:0.2601, r:0.1077, hit:0.7887, ndcg:0.5469, topn:10.
+2021-03-26 16:29:32,229 - root - INFO - Checkpointing ...
+2021-03-26 16:29:37,367 - root - INFO - train loss:0.2377!
+2021-03-26 16:29:48,699 - root - INFO - f1:0.1143, p:0.1702, r:0.1173, hit:0.6896, ndcg:0.4505, topn:10.
+2021-03-26 16:29:59,989 - root - INFO - f1:0.1253, p:0.2610, r:0.1083, hit:0.7904, ndcg:0.5480, topn:10.
+2021-03-26 16:30:00,024 - root - INFO - Checkpointing ...
+2021-03-26 16:30:05,367 - root - INFO - train loss:0.2367!
+2021-03-26 16:30:16,376 - root - INFO - f1:0.1143, p:0.1703, r:0.1172, hit:0.6873, ndcg:0.4505, topn:10.
+2021-03-26 16:30:27,468 - root - INFO - f1:0.1259, p:0.2618, r:0.1090, hit:0.7912, ndcg:0.5489, topn:10.
+2021-03-26 16:30:33,127 - root - INFO - train loss:0.2322!
+2021-03-26 16:30:45,057 - root - INFO - f1:0.1142, p:0.1701, r:0.1172, hit:0.6881, ndcg:0.4505, topn:10.
+2021-03-26 16:30:56,037 - root - INFO - f1:0.1259, p:0.2621, r:0.1090, hit:0.7924, ndcg:0.5509, topn:10.
+2021-03-26 16:31:01,168 - root - INFO - train loss:0.2342!
+2021-03-26 16:31:12,290 - root - INFO - f1:0.1144, p:0.1705, r:0.1175, hit:0.6899, ndcg:0.4512, topn:10.
+2021-03-26 16:31:24,072 - root - INFO - f1:0.1261, p:0.2625, r:0.1092, hit:0.7927, ndcg:0.5503, topn:10.
+2021-03-26 16:31:24,105 - root - INFO - Checkpointing ...
+2021-03-26 16:31:29,182 - root - INFO - train loss:0.2323!
+2021-03-26 16:31:40,010 - root - INFO - f1:0.1147, p:0.1708, r:0.1176, hit:0.6891, ndcg:0.4515, topn:10.
+2021-03-26 16:31:51,064 - root - INFO - f1:0.1266, p:0.2633, r:0.1098, hit:0.7930, ndcg:0.5498, topn:10.
+2021-03-26 16:31:51,113 - root - INFO - Checkpointing ...
+2021-03-26 16:31:56,838 - root - INFO - train loss:0.2325!
+2021-03-26 16:32:07,918 - root - INFO - f1:0.1149, p:0.1713, r:0.1179, hit:0.6912, ndcg:0.4535, topn:10.
+2021-03-26 16:32:18,810 - root - INFO - f1:0.1269, p:0.2638, r:0.1100, hit:0.7935, ndcg:0.5512, topn:10.
+2021-03-26 16:32:18,842 - root - INFO - Checkpointing ...
+2021-03-26 16:32:24,143 - root - INFO - train loss:0.2351!
+2021-03-26 16:32:35,113 - root - INFO - f1:0.1157, p:0.1721, r:0.1186, hit:0.6921, ndcg:0.4540, topn:10.
+2021-03-26 16:32:46,033 - root - INFO - f1:0.1273, p:0.2645, r:0.1102, hit:0.7945, ndcg:0.5523, topn:10.
+2021-03-26 16:32:46,054 - root - INFO - Checkpointing ...
+2021-03-26 16:32:52,665 - root - INFO - train loss:0.2312!
+2021-03-26 16:33:04,164 - root - INFO - f1:0.1154, p:0.1720, r:0.1184, hit:0.6921, ndcg:0.4548, topn:10.
+2021-03-26 16:33:15,295 - root - INFO - f1:0.1278, p:0.2652, r:0.1108, hit:0.7982, ndcg:0.5541, topn:10.
+2021-03-26 16:33:21,265 - root - INFO - train loss:0.2317!
+2021-03-26 16:33:32,169 - root - INFO - f1:0.1162, p:0.1729, r:0.1194, hit:0.6937, ndcg:0.4553, topn:10.
+2021-03-26 16:33:43,682 - root - INFO - f1:0.1281, p:0.2655, r:0.1113, hit:0.7965, ndcg:0.5542, topn:10.
+2021-03-26 16:33:43,724 - root - INFO - Checkpointing ...
+2021-03-26 16:33:49,499 - root - INFO - train loss:0.2303!
+2021-03-26 16:34:00,399 - root - INFO - f1:0.1167, p:0.1734, r:0.1201, hit:0.6959, ndcg:0.4562, topn:10.
+2021-03-26 16:34:11,494 - root - INFO - f1:0.1287, p:0.2665, r:0.1119, hit:0.7977, ndcg:0.5544, topn:10.
+2021-03-26 16:34:11,530 - root - INFO - Checkpointing ...
+2021-03-26 16:34:16,802 - root - INFO - train loss:0.2305!
+2021-03-26 16:34:28,179 - root - INFO - f1:0.1165, p:0.1733, r:0.1197, hit:0.6950, ndcg:0.4565, topn:10.
+2021-03-26 16:34:39,343 - root - INFO - f1:0.1282, p:0.2661, r:0.1113, hit:0.7977, ndcg:0.5553, topn:10.
+2021-03-26 16:34:44,697 - root - INFO - train loss:0.2295!
+2021-03-26 16:34:55,845 - root - INFO - f1:0.1170, p:0.1739, r:0.1202, hit:0.6940, ndcg:0.4548, topn:10.
+2021-03-26 16:35:07,086 - root - INFO - f1:0.1288, p:0.2668, r:0.1121, hit:0.8003, ndcg:0.5563, topn:10.
+2021-03-26 16:35:07,124 - root - INFO - Checkpointing ...
+2021-03-26 16:35:12,396 - root - INFO - train loss:0.2284!
+2021-03-26 16:35:23,663 - root - INFO - f1:0.1170, p:0.1740, r:0.1204, hit:0.6978, ndcg:0.4579, topn:10.
+2021-03-26 16:35:34,529 - root - INFO - f1:0.1290, p:0.2672, r:0.1124, hit:0.8012, ndcg:0.5566, topn:10.
+2021-03-26 16:35:34,554 - root - INFO - Checkpointing ...
+2021-03-26 16:35:40,244 - root - INFO - train loss:0.2267!
+2021-03-26 16:35:51,241 - root - INFO - f1:0.1176, p:0.1747, r:0.1209, hit:0.6978, ndcg:0.4577, topn:10.
+2021-03-26 16:36:02,872 - root - INFO - f1:0.1294, p:0.2679, r:0.1125, hit:0.7993, ndcg:0.5577, topn:10.
+2021-03-26 16:36:02,901 - root - INFO - Checkpointing ...
+2021-03-26 16:36:09,089 - root - INFO - train loss:0.2253!
+2021-03-26 16:36:19,738 - root - INFO - f1:0.1177, p:0.1747, r:0.1212, hit:0.6978, ndcg:0.4579, topn:10.
+2021-03-26 16:36:30,887 - root - INFO - f1:0.1295, p:0.2684, r:0.1126, hit:0.8008, ndcg:0.5585, topn:10.
+2021-03-26 16:36:30,919 - root - INFO - Checkpointing ...
+2021-03-26 16:36:36,123 - root - INFO - train loss:0.2299!
+2021-03-26 16:36:47,530 - root - INFO - f1:0.1180, p:0.1752, r:0.1213, hit:0.6995, ndcg:0.4593, topn:10.
+2021-03-26 16:36:58,342 - root - INFO - f1:0.1300, p:0.2693, r:0.1132, hit:0.7995, ndcg:0.5585, topn:10.
+2021-03-26 16:36:58,367 - root - INFO - Checkpointing ...
+2021-03-26 16:37:03,637 - root - INFO - train loss:0.2268!
+2021-03-26 16:37:14,429 - root - INFO - f1:0.1182, p:0.1756, r:0.1216, hit:0.6985, ndcg:0.4588, topn:10.
+2021-03-26 16:37:25,608 - root - INFO - f1:0.1300, p:0.2692, r:0.1132, hit:0.8005, ndcg:0.5588, topn:10.
+2021-03-26 16:37:25,627 - root - INFO - Checkpointing ...
+2021-03-26 16:37:30,808 - root - INFO - train loss:0.2268!
+2021-03-26 16:37:41,907 - root - INFO - f1:0.1186, p:0.1761, r:0.1220, hit:0.6998, ndcg:0.4593, topn:10.
+2021-03-26 16:37:52,786 - root - INFO - f1:0.1303, p:0.2697, r:0.1135, hit:0.8003, ndcg:0.5599, topn:10.
+2021-03-26 16:37:52,814 - root - INFO - Checkpointing ...
+2021-03-26 16:37:58,639 - root - INFO - train loss:0.2273!
+2021-03-26 16:38:09,424 - root - INFO - f1:0.1192, p:0.1767, r:0.1225, hit:0.7007, ndcg:0.4601, topn:10.
+2021-03-26 16:38:21,290 - root - INFO - f1:0.1306, p:0.2703, r:0.1138, hit:0.8023, ndcg:0.5606, topn:10.
+2021-03-26 16:38:21,335 - root - INFO - Checkpointing ...
+2021-03-26 16:38:26,563 - root - INFO - train loss:0.2233!
+2021-03-26 16:38:37,206 - root - INFO - f1:0.1190, p:0.1764, r:0.1224, hit:0.6998, ndcg:0.4595, topn:10.
+2021-03-26 16:38:48,281 - root - INFO - f1:0.1305, p:0.2700, r:0.1136, hit:0.8000, ndcg:0.5604, topn:10.
+2021-03-26 16:38:53,651 - root - INFO - train loss:0.2243!
+2021-03-26 16:39:05,225 - root - INFO - f1:0.1194, p:0.1771, r:0.1230, hit:0.7026, ndcg:0.4607, topn:10.
+2021-03-26 16:39:16,249 - root - INFO - f1:0.1307, p:0.2705, r:0.1136, hit:0.7998, ndcg:0.5597, topn:10.
+2021-03-26 16:39:16,289 - root - INFO - Checkpointing ...
+2021-03-26 16:39:21,566 - root - INFO - train loss:0.2255!
+2021-03-26 16:39:32,511 - root - INFO - f1:0.1192, p:0.1767, r:0.1228, hit:0.7023, ndcg:0.4608, topn:10.
+2021-03-26 16:39:43,922 - root - INFO - f1:0.1309, p:0.2706, r:0.1138, hit:0.8010, ndcg:0.5604, topn:10.
+2021-03-26 16:39:50,195 - root - INFO - train loss:0.2249!
+2021-03-26 16:40:01,040 - root - INFO - f1:0.1195, p:0.1773, r:0.1231, hit:0.7028, ndcg:0.4613, topn:10.
+2021-03-26 16:40:12,228 - root - INFO - f1:0.1311, p:0.2711, r:0.1142, hit:0.8018, ndcg:0.5610, topn:10.
+2021-03-26 16:40:12,266 - root - INFO - Checkpointing ...
+2021-03-26 16:40:17,541 - root - INFO - train loss:0.2236!
+2021-03-26 16:40:28,573 - root - INFO - f1:0.1198, p:0.1775, r:0.1234, hit:0.7025, ndcg:0.4619, topn:10.
+2021-03-26 16:40:40,347 - root - INFO - f1:0.1315, p:0.2715, r:0.1145, hit:0.8025, ndcg:0.5607, topn:10.
+2021-03-26 16:40:40,382 - root - INFO - Checkpointing ...
+2021-03-26 16:40:46,100 - root - INFO - train loss:0.2225!
+2021-03-26 16:40:56,962 - root - INFO - f1:0.1199, p:0.1781, r:0.1231, hit:0.7020, ndcg:0.4621, topn:10.
+2021-03-26 16:41:08,101 - root - INFO - f1:0.1314, p:0.2717, r:0.1145, hit:0.8038, ndcg:0.5623, topn:10.
+2021-03-26 16:41:08,125 - root - INFO - Checkpointing ...
+2021-03-26 16:41:13,697 - root - INFO - train loss:0.2217!
+2021-03-26 16:41:25,193 - root - INFO - f1:0.1200, p:0.1777, r:0.1236, hit:0.7025, ndcg:0.4624, topn:10.
+2021-03-26 16:41:36,156 - root - INFO - f1:0.1317, p:0.2720, r:0.1147, hit:0.8045, ndcg:0.5629, topn:10.
+2021-03-26 16:41:36,180 - root - INFO - Checkpointing ...
+2021-03-26 16:41:41,512 - root - INFO - train loss:0.2250!
+2021-03-26 16:41:52,549 - root - INFO - f1:0.1204, p:0.1782, r:0.1239, hit:0.7041, ndcg:0.4635, topn:10.
+2021-03-26 16:42:04,383 - root - INFO - f1:0.1318, p:0.2724, r:0.1149, hit:0.8050, ndcg:0.5632, topn:10.
+2021-03-26 16:42:04,403 - root - INFO - Checkpointing ...
+2021-03-26 16:42:09,973 - root - INFO - train loss:0.2214!
+2021-03-26 16:42:21,062 - root - INFO - f1:0.1204, p:0.1785, r:0.1238, hit:0.7036, ndcg:0.4636, topn:10.
+2021-03-26 16:42:32,239 - root - INFO - f1:0.1318, p:0.2725, r:0.1148, hit:0.8040, ndcg:0.5622, topn:10.
+2021-03-26 16:42:32,277 - root - INFO - Checkpointing ...
+2021-03-26 16:42:37,700 - root - INFO - train loss:0.2214!
+2021-03-26 16:42:48,568 - root - INFO - f1:0.1202, p:0.1784, r:0.1236, hit:0.7026, ndcg:0.4640, topn:10.
+2021-03-26 16:43:00,116 - root - INFO - f1:0.1320, p:0.2732, r:0.1150, hit:0.8041, ndcg:0.5633, topn:10.
+2021-03-26 16:43:06,340 - root - INFO - train loss:0.2230!
+2021-03-26 16:43:17,400 - root - INFO - f1:0.1206, p:0.1789, r:0.1239, hit:0.7026, ndcg:0.4641, topn:10.
+2021-03-26 16:43:28,590 - root - INFO - f1:0.1324, p:0.2734, r:0.1156, hit:0.8041, ndcg:0.5642, topn:10.
+2021-03-26 16:43:28,625 - root - INFO - Checkpointing ...
+2021-03-26 16:43:34,052 - root - INFO - train loss:0.2200!
+2021-03-26 16:43:45,664 - root - INFO - f1:0.1207, p:0.1789, r:0.1241, hit:0.7045, ndcg:0.4662, topn:10.
+2021-03-26 16:43:56,545 - root - INFO - f1:0.1324, p:0.2738, r:0.1155, hit:0.8043, ndcg:0.5642, topn:10.
+2021-03-26 16:43:56,572 - root - INFO - Checkpointing ...
+2021-03-26 16:44:01,800 - root - INFO - train loss:0.2212!
+2021-03-26 16:44:12,797 - root - INFO - f1:0.1210, p:0.1791, r:0.1245, hit:0.7068, ndcg:0.4664, topn:10.
+2021-03-26 16:44:24,332 - root - INFO - f1:0.1324, p:0.2734, r:0.1155, hit:0.8046, ndcg:0.5644, topn:10.
+2021-03-26 16:44:24,357 - root - INFO - Checkpointing ...
+2021-03-26 16:44:29,608 - root - INFO - train loss:0.2201!
+2021-03-26 16:44:40,414 - root - INFO - f1:0.1209, p:0.1791, r:0.1245, hit:0.7066, ndcg:0.4670, topn:10.
+2021-03-26 16:44:51,493 - root - INFO - f1:0.1328, p:0.2741, r:0.1159, hit:0.8041, ndcg:0.5646, topn:10.
+2021-03-26 16:44:56,575 - root - INFO - train loss:0.2210!
+2021-03-26 16:45:07,381 - root - INFO - f1:0.1210, p:0.1793, r:0.1245, hit:0.7071, ndcg:0.4683, topn:10.
+2021-03-26 16:45:18,915 - root - INFO - f1:0.1330, p:0.2745, r:0.1160, hit:0.8063, ndcg:0.5664, topn:10.
+2021-03-26 16:45:24,374 - root - INFO - train loss:0.2208!
+2021-03-26 16:45:34,801 - root - INFO - f1:0.1210, p:0.1795, r:0.1243, hit:0.7060, ndcg:0.4673, topn:10.
+2021-03-26 16:45:45,862 - root - INFO - f1:0.1331, p:0.2748, r:0.1161, hit:0.8056, ndcg:0.5657, topn:10.
+2021-03-26 16:45:52,282 - root - INFO - train loss:0.2198!
+2021-03-26 16:46:03,749 - root - INFO - f1:0.1214, p:0.1800, r:0.1247, hit:0.7075, ndcg:0.4687, topn:10.
+2021-03-26 16:46:14,839 - root - INFO - f1:0.1334, p:0.2751, r:0.1165, hit:0.8079, ndcg:0.5666, topn:10.
+2021-03-26 16:46:14,867 - root - INFO - Checkpointing ...
+2021-03-26 16:46:20,400 - root - INFO - train loss:0.2182!
+2021-03-26 16:46:31,354 - root - INFO - f1:0.1219, p:0.1803, r:0.1255, hit:0.7075, ndcg:0.4677, topn:10.
+2021-03-26 16:46:42,873 - root - INFO - f1:0.1333, p:0.2751, r:0.1164, hit:0.8070, ndcg:0.5663, topn:10.
+2021-03-26 16:46:42,895 - root - INFO - Checkpointing ...
+2021-03-26 16:46:48,050 - root - INFO - train loss:0.2206!
+2021-03-26 16:46:58,892 - root - INFO - f1:0.1216, p:0.1803, r:0.1249, hit:0.7063, ndcg:0.4687, topn:10.
+2021-03-26 16:47:09,809 - root - INFO - f1:0.1339, p:0.2759, r:0.1171, hit:0.8083, ndcg:0.5673, topn:10.
+2021-03-26 16:47:15,477 - root - INFO - train loss:0.2216!
+2021-03-26 16:47:26,647 - root - INFO - f1:0.1216, p:0.1801, r:0.1251, hit:0.7079, ndcg:0.4697, topn:10.
+2021-03-26 16:47:37,713 - root - INFO - f1:0.1338, p:0.2760, r:0.1169, hit:0.8079, ndcg:0.5666, topn:10.
+2021-03-26 16:47:42,964 - root - INFO - train loss:0.2180!
+2021-03-26 16:47:53,623 - root - INFO - f1:0.1216, p:0.1801, r:0.1252, hit:0.7075, ndcg:0.4697, topn:10.
+2021-03-26 16:48:04,663 - root - INFO - f1:0.1343, p:0.2766, r:0.1173, hit:0.8070, ndcg:0.5654, topn:10.
+2021-03-26 16:48:10,859 - root - INFO - train loss:0.2192!
+2021-03-26 16:48:22,717 - root - INFO - f1:0.1221, p:0.1809, r:0.1257, hit:0.7076, ndcg:0.4695, topn:10.
+2021-03-26 16:48:33,874 - root - INFO - f1:0.1344, p:0.2768, r:0.1174, hit:0.8070, ndcg:0.5658, topn:10.
+2021-03-26 16:48:33,906 - root - INFO - Checkpointing ...
+2021-03-26 16:48:39,668 - root - INFO - train loss:0.2185!
+2021-03-26 16:48:50,490 - root - INFO - f1:0.1217, p:0.1803, r:0.1255, hit:0.7071, ndcg:0.4697, topn:10.
+2021-03-26 16:49:02,164 - root - INFO - f1:0.1345, p:0.2771, r:0.1174, hit:0.8068, ndcg:0.5660, topn:10.
+2021-03-26 16:49:07,601 - root - INFO - train loss:0.2173!
+2021-03-26 16:49:18,493 - root - INFO - f1:0.1224, p:0.1812, r:0.1261, hit:0.7103, ndcg:0.4709, topn:10.
+2021-03-26 16:49:29,310 - root - INFO - f1:0.1349, p:0.2779, r:0.1178, hit:0.8096, ndcg:0.5678, topn:10.
+2021-03-26 16:49:29,339 - root - INFO - Checkpointing ...
+2021-03-26 16:49:34,746 - root - INFO - train loss:0.2187!
+2021-03-26 16:49:45,803 - root - INFO - f1:0.1227, p:0.1816, r:0.1264, hit:0.7118, ndcg:0.4712, topn:10.
+2021-03-26 16:49:56,735 - root - INFO - f1:0.1349, p:0.2780, r:0.1178, hit:0.8083, ndcg:0.5682, topn:10.
+2021-03-26 16:49:56,768 - root - INFO - Checkpointing ...
+2021-03-26 16:50:01,986 - root - INFO - train loss:0.2180!
+2021-03-26 16:50:13,077 - root - INFO - f1:0.1226, p:0.1815, r:0.1264, hit:0.7108, ndcg:0.4715, topn:10.
+2021-03-26 16:50:24,078 - root - INFO - f1:0.1347, p:0.2777, r:0.1176, hit:0.8073, ndcg:0.5678, topn:10.
+2021-03-26 16:50:29,485 - root - INFO - train loss:0.2186!
+2021-03-26 16:50:40,801 - root - INFO - f1:0.1229, p:0.1819, r:0.1267, hit:0.7114, ndcg:0.4721, topn:10.
+2021-03-26 16:50:51,777 - root - INFO - f1:0.1351, p:0.2781, r:0.1181, hit:0.8088, ndcg:0.5677, topn:10.
+2021-03-26 16:50:51,820 - root - INFO - Checkpointing ...
+2021-03-26 16:50:57,935 - root - INFO - train loss:0.2174!
+2021-03-26 16:51:08,282 - root - INFO - f1:0.1231, p:0.1820, r:0.1269, hit:0.7139, ndcg:0.4732, topn:10.
+2021-03-26 16:51:19,904 - root - INFO - f1:0.1351, p:0.2782, r:0.1180, hit:0.8079, ndcg:0.5680, topn:10.
+2021-03-26 16:51:19,934 - root - INFO - Checkpointing ...
+2021-03-26 16:51:25,054 - root - INFO - train loss:0.2165!
+2021-03-26 16:51:35,872 - root - INFO - f1:0.1233, p:0.1824, r:0.1273, hit:0.7144, ndcg:0.4731, topn:10.
+2021-03-26 16:51:46,857 - root - INFO - f1:0.1352, p:0.2785, r:0.1181, hit:0.8084, ndcg:0.5686, topn:10.
+2021-03-26 16:51:46,886 - root - INFO - Checkpointing ...
+2021-03-26 16:51:52,093 - root - INFO - train loss:0.2172!
+2021-03-26 16:52:03,713 - root - INFO - f1:0.1231, p:0.1823, r:0.1269, hit:0.7137, ndcg:0.4738, topn:10.
+2021-03-26 16:52:14,846 - root - INFO - f1:0.1354, p:0.2786, r:0.1184, hit:0.8086, ndcg:0.5696, topn:10.
+2021-03-26 16:52:19,976 - root - INFO - train loss:0.2168!
+2021-03-26 16:52:30,894 - root - INFO - f1:0.1233, p:0.1824, r:0.1272, hit:0.7132, ndcg:0.4736, topn:10.
+2021-03-26 16:52:42,121 - root - INFO - f1:0.1356, p:0.2790, r:0.1186, hit:0.8086, ndcg:0.5688, topn:10.
+2021-03-26 16:52:42,147 - root - INFO - Checkpointing ...
+2021-03-26 16:52:47,440 - root - INFO - train loss:0.2145!
+2021-03-26 16:52:59,016 - root - INFO - f1:0.1237, p:0.1826, r:0.1278, hit:0.7144, ndcg:0.4729, topn:10.
+2021-03-26 16:53:10,093 - root - INFO - f1:0.1356, p:0.2791, r:0.1185, hit:0.8089, ndcg:0.5679, topn:10.
+2021-03-26 16:53:10,122 - root - INFO - Checkpointing ...
+2021-03-26 16:53:15,903 - root - INFO - train loss:0.2197!
+2021-03-26 16:53:26,685 - root - INFO - f1:0.1237, p:0.1830, r:0.1277, hit:0.7136, ndcg:0.4729, topn:10.
+2021-03-26 16:53:39,178 - root - INFO - f1:0.1357, p:0.2797, r:0.1185, hit:0.8088, ndcg:0.5685, topn:10.
+2021-03-26 16:53:39,212 - root - INFO - Checkpointing ...
+2021-03-26 16:53:44,650 - root - INFO - train loss:0.2162!
+2021-03-26 16:53:55,481 - root - INFO - f1:0.1239, p:0.1831, r:0.1278, hit:0.7144, ndcg:0.4739, topn:10.
+2021-03-26 16:54:06,544 - root - INFO - f1:0.1359, p:0.2798, r:0.1187, hit:0.8091, ndcg:0.5686, topn:10.
+2021-03-26 16:54:06,572 - root - INFO - Checkpointing ...
+2021-03-26 16:54:12,403 - root - INFO - train loss:0.2122!
+2021-03-26 16:54:23,699 - root - INFO - f1:0.1245, p:0.1836, r:0.1287, hit:0.7169, ndcg:0.4742, topn:10.
+2021-03-26 16:54:34,762 - root - INFO - f1:0.1354, p:0.2792, r:0.1181, hit:0.8094, ndcg:0.5690, topn:10.
+2021-03-26 16:54:34,799 - root - INFO - Checkpointing ...
+2021-03-26 16:54:40,353 - root - INFO - train loss:0.2150!
+2021-03-26 16:54:51,430 - root - INFO - f1:0.1247, p:0.1841, r:0.1288, hit:0.7177, ndcg:0.4738, topn:10.
+2021-03-26 16:55:02,778 - root - INFO - f1:0.1358, p:0.2797, r:0.1184, hit:0.8098, ndcg:0.5704, topn:10.
+2021-03-26 16:55:02,798 - root - INFO - Checkpointing ...
+2021-03-26 16:55:07,915 - root - INFO - train loss:0.2145!
+2021-03-26 16:55:18,706 - root - INFO - f1:0.1247, p:0.1842, r:0.1286, hit:0.7167, ndcg:0.4744, topn:10.
+2021-03-26 16:55:29,864 - root - INFO - f1:0.1361, p:0.2803, r:0.1188, hit:0.8114, ndcg:0.5708, topn:10.
+2021-03-26 16:55:35,147 - root - INFO - train loss:0.2144!
+2021-03-26 16:55:45,992 - root - INFO - f1:0.1251, p:0.1847, r:0.1291, hit:0.7172, ndcg:0.4747, topn:10.
+2021-03-26 16:55:58,225 - root - INFO - f1:0.1361, p:0.2803, r:0.1188, hit:0.8093, ndcg:0.5703, topn:10.
+2021-03-26 16:55:58,245 - root - INFO - Checkpointing ...
+2021-03-26 16:56:04,439 - root - INFO - train loss:0.2155!
+2021-03-26 16:56:14,789 - root - INFO - f1:0.1246, p:0.1842, r:0.1284, hit:0.7156, ndcg:0.4752, topn:10.
+2021-03-26 16:56:26,063 - root - INFO - f1:0.1365, p:0.2810, r:0.1192, hit:0.8119, ndcg:0.5712, topn:10.
+2021-03-26 16:56:31,675 - root - INFO - train loss:0.2143!
+2021-03-26 16:56:43,120 - root - INFO - f1:0.1248, p:0.1847, r:0.1285, hit:0.7156, ndcg:0.4747, topn:10.
+2021-03-26 16:56:54,356 - root - INFO - f1:0.1363, p:0.2806, r:0.1190, hit:0.8119, ndcg:0.5710, topn:10.
+2021-03-26 16:56:59,703 - root - INFO - train loss:0.2155!
+2021-03-26 16:57:10,784 - root - INFO - f1:0.1253, p:0.1853, r:0.1293, hit:0.7166, ndcg:0.4749, topn:10.
+2021-03-26 16:57:22,401 - root - INFO - f1:0.1365, p:0.2809, r:0.1192, hit:0.8113, ndcg:0.5719, topn:10.
+2021-03-26 16:57:22,420 - root - INFO - Checkpointing ...
+2021-03-26 16:57:27,478 - root - INFO - train loss:0.2142!
+2021-03-26 16:57:38,421 - root - INFO - f1:0.1253, p:0.1852, r:0.1295, hit:0.7174, ndcg:0.4756, topn:10.
+2021-03-26 16:57:49,485 - root - INFO - f1:0.1366, p:0.2811, r:0.1193, hit:0.8126, ndcg:0.5715, topn:10.
+2021-03-26 16:57:49,514 - root - INFO - Checkpointing ...
+2021-03-26 16:57:54,786 - root - INFO - train loss:0.2157!
+2021-03-26 16:58:05,692 - root - INFO - f1:0.1252, p:0.1850, r:0.1293, hit:0.7164, ndcg:0.4759, topn:10.
+2021-03-26 16:58:17,565 - root - INFO - f1:0.1368, p:0.2816, r:0.1194, hit:0.8118, ndcg:0.5713, topn:10.
+2021-03-26 16:58:24,045 - root - INFO - train loss:0.2130!
+2021-03-26 16:58:34,925 - root - INFO - f1:0.1254, p:0.1853, r:0.1296, hit:0.7167, ndcg:0.4763, topn:10.
+2021-03-26 16:58:46,061 - root - INFO - f1:0.1368, p:0.2814, r:0.1194, hit:0.8121, ndcg:0.5717, topn:10.
+2021-03-26 16:58:46,096 - root - INFO - Checkpointing ...
+2021-03-26 16:58:51,508 - root - INFO - train loss:0.2136!
+2021-03-26 16:59:02,874 - root - INFO - f1:0.1250, p:0.1850, r:0.1290, hit:0.7142, ndcg:0.4758, topn:10.
+2021-03-26 16:59:13,819 - root - INFO - f1:0.1364, p:0.2812, r:0.1191, hit:0.8111, ndcg:0.5712, topn:10.
+2021-03-26 16:59:19,164 - root - INFO - train loss:0.2124!
+2021-03-26 16:59:30,169 - root - INFO - f1:0.1253, p:0.1852, r:0.1294, hit:0.7156, ndcg:0.4757, topn:10.
+2021-03-26 16:59:41,766 - root - INFO - f1:0.1369, p:0.2818, r:0.1195, hit:0.8123, ndcg:0.5714, topn:10.
+2021-03-26 16:59:47,514 - root - INFO - train loss:0.2146!
+2021-03-26 16:59:58,420 - root - INFO - f1:0.1255, p:0.1855, r:0.1296, hit:0.7167, ndcg:0.4767, topn:10.
+2021-03-26 17:00:09,538 - root - INFO - f1:0.1372, p:0.2823, r:0.1198, hit:0.8136, ndcg:0.5717, topn:10.
+2021-03-26 17:00:09,577 - root - INFO - Checkpointing ...
+2021-03-26 17:00:14,942 - root - INFO - train loss:0.2122!
+2021-03-26 17:00:25,883 - root - INFO - f1:0.1257, p:0.1856, r:0.1299, hit:0.7179, ndcg:0.4766, topn:10.
+2021-03-26 17:00:37,568 - root - INFO - f1:0.1369, p:0.2818, r:0.1197, hit:0.8131, ndcg:0.5723, topn:10.
+2021-03-26 17:00:37,598 - root - INFO - Checkpointing ...
+2021-03-26 17:00:43,376 - root - INFO - train loss:0.2119!
+2021-03-26 17:00:54,266 - root - INFO - f1:0.1260, p:0.1860, r:0.1303, hit:0.7179, ndcg:0.4773, topn:10.
+2021-03-26 17:01:05,426 - root - INFO - f1:0.1371, p:0.2823, r:0.1197, hit:0.8134, ndcg:0.5728, topn:10.
+2021-03-26 17:01:05,461 - root - INFO - Checkpointing ...
+2021-03-26 17:01:11,075 - root - INFO - train loss:0.2115!
+2021-03-26 17:01:22,848 - root - INFO - f1:0.1259, p:0.1858, r:0.1302, hit:0.7184, ndcg:0.4770, topn:10.
+2021-03-26 17:01:34,102 - root - INFO - f1:0.1370, p:0.2821, r:0.1196, hit:0.8127, ndcg:0.5725, topn:10.
+2021-03-26 17:01:39,098 - root - INFO - train loss:0.2122!
+2021-03-26 17:01:49,847 - root - INFO - f1:0.1260, p:0.1862, r:0.1300, hit:0.7182, ndcg:0.4773, topn:10.
+2021-03-26 17:02:01,367 - root - INFO - f1:0.1371, p:0.2823, r:0.1196, hit:0.8131, ndcg:0.5726, topn:10.
+2021-03-26 17:02:06,618 - root - INFO - train loss:0.2116!
+2021-03-26 17:02:17,446 - root - INFO - f1:0.1261, p:0.1861, r:0.1304, hit:0.7199, ndcg:0.4778, topn:10.
+2021-03-26 17:02:28,493 - root - INFO - f1:0.1372, p:0.2824, r:0.1198, hit:0.8144, ndcg:0.5731, topn:10.
+2021-03-26 17:02:28,521 - root - INFO - Checkpointing ...
+2021-03-26 17:02:33,747 - root - INFO - train loss:0.2116!
+2021-03-26 17:02:44,615 - root - INFO - f1:0.1261, p:0.1864, r:0.1300, hit:0.7197, ndcg:0.4783, topn:10.
+2021-03-26 17:02:56,101 - root - INFO - f1:0.1372, p:0.2825, r:0.1197, hit:0.8137, ndcg:0.5738, topn:10.
+2021-03-26 17:03:01,382 - root - INFO - train loss:0.2112!
+2021-03-26 17:03:12,323 - root - INFO - f1:0.1262, p:0.1865, r:0.1302, hit:0.7182, ndcg:0.4776, topn:10.
+2021-03-26 17:03:23,296 - root - INFO - f1:0.1375, p:0.2827, r:0.1200, hit:0.8137, ndcg:0.5733, topn:10.
+2021-03-26 17:03:23,319 - root - INFO - Checkpointing ...
+2021-03-26 17:03:29,523 - root - INFO - train loss:0.2106!
+2021-03-26 17:03:40,921 - root - INFO - f1:0.1262, p:0.1865, r:0.1303, hit:0.7185, ndcg:0.4777, topn:10.
+2021-03-26 17:03:51,980 - root - INFO - f1:0.1376, p:0.2830, r:0.1202, hit:0.8142, ndcg:0.5745, topn:10.
+2021-03-26 17:03:52,014 - root - INFO - Checkpointing ...
+2021-03-26 17:04:11,139 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.186937, 'RECALL@10': 0.130837, 'NDCG@10': 0.478605, 'MAP@10': 0.363282, 'MAP': 0.363282}.

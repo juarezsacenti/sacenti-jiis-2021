@@ -1,0 +1,90 @@
+2021-04-23 02:35:01,785 - root - INFO - Flag Values:
+{
+    "L1_flag": true,
+    "batch_size": 400,
+    "ckpt_path": "/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/",
+    "clipping_max_value": 5.0,
+    "data_path": "/home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/cao-format/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 1052701,
+    "embedding_size": 100,
+    "eval_interval_steps": 1052699,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-cofm-1619156101",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 0.0,
+    "learning_rate": 0.001,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": "/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/ml1m-fm-pretrained.ckpt:/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/ml1m-transe-pretrained2.ckpt",
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "cofm",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adam",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 3,
+    "share_embeddings": true,
+    "topn": 10,
+    "training_steps": 1052700,
+    "use_st_gumbel": false,
+    "visualization_port": 8097
+}
+2021-04-23 02:35:03,569 - root - INFO - Totally 599124 train ratings, 199708,199707 eval ratings in files: /home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/cao-format/ml1m/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/cao-format/ml1m/test.dat!
+2021-04-23 02:35:03,577 - root - INFO - successfully load 6040 users and 3260 items!
+2021-04-23 02:35:05,584 - root - INFO - Totally 303935 train triples, 43419,86835 eval triples in files: /home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/cao-format/ml1m/kg/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/cao-format/ml1m/kg/test.dat!
+2021-04-23 02:35:05,599 - root - INFO - successfully load 14708 entities and 20 relations!
+2021-04-23 02:35:05,902 - root - INFO - Find 2934 aligned items and entities!
+2021-04-23 02:35:05,903 - root - INFO - Building model.
+2021-04-23 02:35:07,657 - root - INFO - Architecture: coFM(
+  (user_embeddings): Embedding(6040, 100)
+  (user_bias): Embedding(6040, 1)
+  (item_bias): Embedding(15034, 1)
+  (rel_embeddings): Embedding(20, 100)
+  (ent_embeddings): Embedding(15034, 100)
+  (item_embeddings): Embedding(15034, 100)
+)
+2021-04-23 02:35:07,657 - root - INFO - Total params: 2130475.0
+2021-04-23 02:35:07,657 - root - INFO - One epoch is 2996 steps.
+2021-04-23 02:35:07,658 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-04-23 02:35:07,855 - root - INFO - Restored 14708 entities from checkpoint.
+2021-04-23 02:35:07,898 - root - INFO - Restored 3260 items from checkpoint.
+2021-04-23 02:35:07,972 - root - INFO - Restored 3260 items bias from checkpoint.
+2021-04-23 02:35:07,972 - root - INFO - Load Embeddings of bias, user_embeddings.weight, item_embeddings.weight, user_bias.weight, item_bias.weight from /home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/ml1m-fm-pretrained.ckpt.
+2021-04-23 02:35:07,973 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-04-23 02:35:08,213 - root - INFO - Restored 14708 entities from checkpoint.
+2021-04-23 02:35:08,256 - root - INFO - Restored 3260 items from checkpoint.
+2021-04-23 02:35:08,256 - root - INFO - Load Embeddings of ent_embeddings.weight, rel_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp4/fold0/ml-cao_cv_oKG/ml1m-transe-pretrained2.ckpt.
+2021-04-23 02:35:08,256 - root - INFO - Training.
+2021-04-23 02:35:08,256 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2021-04-23 02:35:16,472 - root - INFO - f1:0.0699, p:0.1516, r:0.0599, hit:0.6548, ndcg:0.3953, topn:10.
+2021-04-23 02:35:24,222 - root - INFO - f1:0.0675, p:0.1490, r:0.0593, hit:0.6306, ndcg:0.3809, topn:10.
+2021-04-23 02:36:40,345 - root - INFO - head hit:0.0210, head mean rank:5789.2598, topn:10.
+2021-04-23 02:36:40,345 - root - INFO - tail hit:0.0460, tail mean rank:4254.3333, topn:10.
+2021-04-23 02:36:40,345 - root - INFO - avg hit:0.0335, avg mean rank:5021.7966, topn:10.
+2021-04-23 02:38:27,266 - root - INFO - head hit:0.0204, head mean rank:5829.9000, topn:10.
+2021-04-23 02:38:27,266 - root - INFO - tail hit:0.0455, tail mean rank:4289.2717, topn:10.
+2021-04-23 02:38:27,267 - root - INFO - avg hit:0.0329, avg mean rank:5059.5859, topn:10.
+2021-04-23 06:10:29,412 - root - INFO - rec train loss:4.3561, kg train loss:17.0049!
+2021-04-23 06:10:36,823 - root - INFO - f1:0.1331, p:0.2921, r:0.1110, hit:0.8139, ndcg:0.5638, topn:10.
+2021-04-23 06:10:45,053 - root - INFO - f1:0.1281, p:0.2884, r:0.1076, hit:0.7919, ndcg:0.5494, topn:10.
+2021-04-23 06:11:47,529 - root - INFO - head hit:0.1939, head mean rank:766.4931, topn:10.
+2021-04-23 06:11:47,530 - root - INFO - tail hit:0.2612, tail mean rank:726.4698, topn:10.
+2021-04-23 06:11:47,530 - root - INFO - avg hit:0.2275, avg mean rank:746.4815, topn:10.
+2021-04-23 06:13:16,701 - root - INFO - head hit:0.1951, head mean rank:769.3407, topn:10.
+2021-04-23 06:13:16,701 - root - INFO - tail hit:0.2615, tail mean rank:718.7705, topn:10.
+2021-04-23 06:13:16,701 - root - INFO - avg hit:0.2283, avg mean rank:744.0556, topn:10.
+2021-04-23 06:13:16,742 - root - INFO - Checkpointing ...
+2021-04-23 06:13:28,974 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.292301, 'RECALL@10': 0.111151, 'NDCG@10': 0.563869, 'MAP@10': 0.448478, 'MAP': 0.448478}.
+2021-04-23 06:13:41,856 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.28836, 'RECALL@10': 0.107622, 'NDCG@10': 0.549628, 'MAP@10': 0.436722, 'MAP': 0.436722}.

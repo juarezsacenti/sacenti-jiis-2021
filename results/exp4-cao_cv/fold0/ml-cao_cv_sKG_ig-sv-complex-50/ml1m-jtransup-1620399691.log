@@ -1,0 +1,87 @@
+2021-05-07 12:01:31,095 - root - INFO - Flag Values:
+{
+    "L1_flag": true,
+    "batch_size": 400,
+    "ckpt_path": "/home/juarez/git/results/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/",
+    "clipping_max_value": 5.0,
+    "data_path": "/home/juarez/git/datasets/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/cao-format/",
+    "dataset": "ml1m",
+    "early_stopping_steps_to_wait": 1052701,
+    "embedding_size": 100,
+    "eval_interval_steps": 1052699,
+    "eval_only_mode": false,
+    "experiment_name": "ml1m-jtransup-1620399691",
+    "filter_wrong_corrupted": true,
+    "has_visualization": false,
+    "is_report": false,
+    "joint_ratio": 0.5,
+    "kg_lambda": 1.0,
+    "kg_test_files": "valid.dat:test.dat",
+    "l2_lambda": 0.0,
+    "learning_rate": 0.001,
+    "learning_rate_decay_when_no_progress": 0.5,
+    "load_ckpt_file": "/home/juarez/git/results/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/ml1m-transup-pretrained.ckpt:/home/juarez/git/results/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/ml1m-transh-pretrained.ckpt",
+    "load_experiment_name": null,
+    "log_level": "debug",
+    "log_path": "/home/juarez/git/results/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/",
+    "margin": 1.0,
+    "max_queue": 10,
+    "model_type": "jtransup",
+    "momentum": 0.9,
+    "negtive_samples": 1,
+    "norm_lambda": 1.0,
+    "num_preferences": 4,
+    "num_processes": 4,
+    "optimizer_type": "Adam",
+    "rec_test_files": "valid.dat:test.dat",
+    "seed": 3,
+    "share_embeddings": false,
+    "topn": 10,
+    "training_steps": 1052700,
+    "use_st_gumbel": true,
+    "visualization_port": 8097
+}
+2021-05-07 12:01:32,871 - root - INFO - Totally 599124 train ratings, 199708,199707 eval ratings in files: /home/juarez/git/datasets/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/cao-format/ml1m/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/cao-format/ml1m/test.dat!
+2021-05-07 12:01:32,879 - root - INFO - successfully load 6040 users and 3260 items!
+2021-05-07 12:01:34,665 - root - INFO - Totally 237943 train triples, 33991,67978 eval triples in files: /home/juarez/git/datasets/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/cao-format/ml1m/kg/valid.dat;/home/juarez/git/datasets/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/cao-format/ml1m/kg/test.dat!
+2021-05-07 12:01:34,673 - root - INFO - successfully load 8981 entities and 20 relations!
+2021-05-07 12:01:34,911 - root - INFO - Find 2929 aligned items and entities!
+2021-05-07 12:01:34,912 - root - INFO - Building model.
+2021-05-07 12:01:36,406 - root - INFO - Architecture: jTransUPModel(
+  (user_embeddings): Embedding(6040, 100)
+  (item_embeddings): Embedding(3260, 100)
+  (pref_embeddings): Embedding(20, 100)
+  (pref_norm_embeddings): Embedding(20, 100)
+  (ent_embeddings): Embedding(8982, 100, padding_idx=8981)
+  (rel_embeddings): Embedding(20, 100)
+  (norm_embeddings): Embedding(20, 100)
+)
+2021-05-07 12:01:36,407 - root - INFO - Total params: 1836200.0
+2021-05-07 12:01:36,407 - root - INFO - One epoch is 2996 steps.
+2021-05-07 12:01:36,407 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-05-07 12:01:36,415 - root - INFO - Load Embeddings of user_embeddings.weight, item_embeddings.weight, pref_embeddings.weight, pref_norm_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/ml1m-transup-pretrained.ckpt.
+2021-05-07 12:01:36,415 - root - INFO - Found checkpoint, restoring pre-trained embeddings.
+2021-05-07 12:01:36,421 - root - INFO - Restored 8981 entities from checkpoint.
+2021-05-07 12:01:36,421 - root - INFO - Load Embeddings of ent_embeddings.weight, rel_embeddings.weight, norm_embeddings.weight from /home/juarez/git/results/JIIS-revised-exp4-2/fold0/ml-cao_cv_sKG_ig-sv-complex-50/ml1m-transh-pretrained.ckpt.
+2021-05-07 12:01:36,421 - root - INFO - Training.
+2021-05-07 12:01:36,421 - root - INFO - rec train loss:0.0000, kg train loss:0.0000!
+2021-05-07 12:01:49,235 - root - INFO - f1:0.0370, p:0.0904, r:0.0297, hit:0.4871, ndcg:0.3233, topn:10.
+2021-05-07 12:02:02,853 - root - INFO - f1:0.0366, p:0.0925, r:0.0296, hit:0.4775, ndcg:0.3142, topn:10.
+2021-05-07 12:02:48,122 - root - INFO - head hit:0.1151, head mean rank:663.2822, topn:10.
+2021-05-07 12:02:48,123 - root - INFO - tail hit:0.1895, tail mean rank:635.5534, topn:10.
+2021-05-07 12:02:48,123 - root - INFO - avg hit:0.1523, avg mean rank:649.4178, topn:10.
+2021-05-07 12:03:51,616 - root - INFO - head hit:0.1149, head mean rank:669.3968, topn:10.
+2021-05-07 12:03:51,617 - root - INFO - tail hit:0.1859, tail mean rank:635.9098, topn:10.
+2021-05-07 12:03:51,617 - root - INFO - avg hit:0.1504, avg mean rank:652.6533, topn:10.
+2021-05-07 17:26:31,854 - root - INFO - rec train loss:5.0208, kg train loss:20.0325!
+2021-05-07 17:26:45,136 - root - INFO - f1:0.1855, p:0.3945, r:0.1555, hit:0.8858, ndcg:0.6872, topn:10.
+2021-05-07 17:26:58,035 - root - INFO - f1:0.1804, p:0.3890, r:0.1549, hit:0.8682, ndcg:0.6764, topn:10.
+2021-05-07 17:27:43,822 - root - INFO - head hit:0.1572, head mean rank:576.9489, topn:10.
+2021-05-07 17:27:43,822 - root - INFO - tail hit:0.2238, tail mean rank:554.1683, topn:10.
+2021-05-07 17:27:43,822 - root - INFO - avg hit:0.1905, avg mean rank:565.5586, topn:10.
+2021-05-07 17:28:48,853 - root - INFO - head hit:0.1519, head mean rank:578.4969, topn:10.
+2021-05-07 17:28:48,854 - root - INFO - tail hit:0.2192, tail mean rank:555.3100, topn:10.
+2021-05-07 17:28:48,854 - root - INFO - avg hit:0.1856, avg mean rank:566.9034, topn:10.
+2021-05-07 17:28:48,890 - root - INFO - Checkpointing ...
+2021-05-07 17:29:06,184 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.394818, 'RECALL@10': 0.155428, 'NDCG@10': 0.68583, 'MAP@10': 0.587378, 'MAP': 0.587378}.
+2021-05-07 17:29:23,026 - root - INFO - From CaseRecommender evaluator: {'PREC@10': 0.390134, 'RECALL@10': 0.155885, 'NDCG@10': 0.676059, 'MAP@10': 0.579246, 'MAP': 0.579246}.
